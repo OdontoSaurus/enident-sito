@@ -1,0 +1,15 @@
+:root{--brand:#FF7A1A;--brand-deep:#B5470B;--ink:#221B16;--ink-soft:#5F554E;--line:#EAD9CC}
+*{box-sizing:border-box}html{font-size:17px}
+body{margin:0;font-family:"Figtree","Segoe UI",system-ui,sans-serif;color:var(--ink);line-height:1.55}
+header{background:var(--brand);padding:1rem 1.25rem}
+.brand{max-width:44rem;margin:0 auto;font-weight:700;font-size:1.1rem}
+.brand a{color:var(--ink);text-decoration:none}
+main{max-width:44rem;margin:0 auto;padding:2.5rem 1.25rem 4rem}
+h1{font-size:2rem;line-height:1.15;margin:0 0 .25rem}
+.agg{color:var(--ink-soft);margin:0 0 2rem}
+h2{font-size:1.25rem;margin:2rem 0 .5rem}
+p,li{max-width:70ch}ul,ol{padding-left:1.2rem}
+a{color:var(--brand-deep)}
+.box{background:#FFF4EC;border-left:4px solid var(--brand);padding:.9rem 1rem;border-radius:0 .5rem .5rem 0}
+footer{max-width:44rem;margin:0 auto;padding:1.5rem 1.25rem 3rem;font-size:.9rem;color:var(--ink-soft);display:flex;flex-wrap:wrap;gap:1rem 1.5rem}
+table{border-collapse:collapse;width:100%;font-size:.95rem}th,td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid var(--line);vertical-align:top}
