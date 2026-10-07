@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>8. Report – Guida di Enident Planner</title>
+<meta name="description" content="Guida di Enident Planner, l'agenda per studi dentistici: 8. Report.">
+<link rel="icon" type="image/svg+xml" href="/icona.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/stile.css">
+<style>
+main{max-width:52rem}
+.brand{max-width:52rem;display:flex;gap:.6rem;align-items:baseline}
+.brand .sez{font-weight:500;color:var(--ink)}
+footer{max-width:52rem}
+main img{max-width:100%;height:auto;border:1px solid var(--line);border-radius:.5rem;box-shadow:0 1px 3px rgba(34,27,22,.08)}
+main p img{vertical-align:top;margin:0 .4rem .4rem 0}
+a.img{display:inline-block}
+main a{overflow-wrap:anywhere}
+code{background:#FFF4EC;border-radius:.25rem;padding:.05rem .3rem;font-size:.9em}
+pre{background:#FFF4EC;border-radius:.5rem;padding:.8rem 1rem;overflow-x:auto;white-space:pre-wrap}
+pre code{padding:0;background:none}
+blockquote{background:#FFF4EC;border-left:4px solid var(--brand);padding:.6rem 1rem;margin:1rem 0;border-radius:0 .5rem .5rem 0}
+blockquote p{margin:.3rem 0}
+.tabella{overflow-x:auto}
+h3{font-size:1.08rem;margin:1.6rem 0 .4rem}
+h4{font-size:1rem;margin:1.3rem 0 .3rem}
+hr{border:0;border-top:1px solid var(--line);margin:2.5rem 0 1rem}
+.versione{color:var(--ink-soft);font-size:.9rem}
+</style>
+</head>
+<body>
+<header><div class="brand"><a href="/">Enident Planner</a><a class="sez" href="./">Guida</a></div></header>
+<main>
+<h1 id="8-report">8. Report</h1>
+<p>La pagina <strong>Report</strong> mostra come sta andando lo studio: occupazione, appuntamenti, no-show,
+conferme dai promemoria, lista d&#39;attesa e altro, sempre confrontati con il periodo precedente.</p>
+<p>La vedono il proprietario e gli amministratori, con i piani Studio e Multi studio. Con il piano
+gratuito si vede un&#39;anteprima sfocata con il rimando ai piani.</p>
+<p><a class="img" href="img/report.png"><img src="img/report.png" alt="La pagina Report" loading="lazy"></a></p>
+<h2 id="scegliere-il-periodo">Scegliere il periodo</h2>
+<ol>
+<li>In <strong>Periodo</strong> scegli <strong>Questa settimana</strong>, <strong>Questo mese</strong> (all&#39;apertura), <strong>Questo
+trimestre</strong>, <strong>Quest&#39;anno</strong> oppure <strong>Personalizzato</strong> con le date (al massimo un anno).</li>
+<li>Le frecce <strong>‹ ›</strong> passano al periodo precedente o successivo.</li>
+</ol>
+<p>Sotto il titolo è indicato il periodo di confronto: per i mesi interi gli stessi mesi prima,
+altrimenti lo stesso numero di giorni subito prima.</p>
+<h2 id="i-riquadri">I riquadri</h2>
+<p>Ogni riquadro ha il numero principale, una riga di spiegazione, la variazione rispetto al periodo
+precedente (verde se migliora, rossa se peggiora) e un grafico. <strong>Un clic apre il dettaglio</strong> con
+le tabelle.</p>
+<div class="tabella"><table>
+<thead>
+<tr>
+<th>Riquadro</th>
+<th>Cosa misura</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Occupazione</td>
+<td>Ore prenotate su ore disponibili (apertura e orari degli operatori, meno blocchi e festività), per operatore e per stanza</td>
+</tr>
+<tr>
+<td>Appuntamenti</td>
+<td>Appuntamenti del periodo per stato (completati, annullati, …)</td>
+</tr>
+<tr>
+<td>No-show</td>
+<td>Pazienti non presentati sul totale degli appuntamenti conclusi</td>
+</tr>
+<tr>
+<td>Per tipo</td>
+<td>Appuntamenti e ore per tipo di appuntamento</td>
+</tr>
+<tr>
+<td>Nuovi pazienti</td>
+<td>Pazienti inseriti, mese per mese</td>
+</tr>
+<tr>
+<td>Conferme dai promemoria</td>
+<td>Promemoria inviati per canale e quanti appuntamenti sono stati confermati</td>
+</tr>
+<tr>
+<td>Lista d&#39;attesa</td>
+<td>Voci inserite, prenotate e attesa media</td>
+</tr>
+<tr>
+<td>Attesa in studio</td>
+<td>Minuti tra l&#39;arrivo e l&#39;inizio della visita (si misura segnando «Arrivato» e «Inizia»), per operatore e i pazienti che aspettano di più</td>
+</tr>
+<tr>
+<td>Da richiamare</td>
+<td>Richiami nuovi, chiusi e ancora aperti, per motivo</td>
+</tr>
+<tr>
+<td>Prenotazione online</td>
+<td>Richieste ricevute, accettate, rifiutate e scadute, tempo medio di risposta (solo se la prenotazione online è o è stata attiva)</td>
+</tr>
+<tr>
+<td>Andamento</td>
+<td>Appuntamenti settimana per settimana nell&#39;anno</td>
+</tr>
+</tbody></table>
+</div><h2 id="esportare-e-stampare">Esportare e stampare</h2>
+<ul>
+<li><strong>Esporta CSV</strong> scarica il report in un file che si apre con Excel. Nell&#39;app per il computer
+finisce nella cartella Download, con <strong>Mostra nella cartella</strong>.</li>
+<li><strong>Stampa</strong> prepara il report su fogli A4, con i riquadri e le tabelle di dettaglio.</li>
+</ul>
+<hr>
+<p><a href="07-prenotazione-online.html">← Prenotazione online</a> · <a href="index.html">Indice</a> · <a href="09-abbonamento-e-piani.html">Abbonamento e piani →</a></p>
+</main>
+<footer>
+  <span>© <span id="anno"></span> Francesco Paolo Enia</span>
+  <a href="./">Indice della guida</a>
+  <a href="/download/">Scarica l'app</a>
+  <a href="/termini">Termini di servizio</a>
+  <a href="/privacy">Informativa privacy</a>
+</footer>
+<script>document.getElementById('anno').textContent=new Date().getFullYear();</script>
+</body>
+</html>

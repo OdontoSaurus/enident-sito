@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3. Pazienti – Guida di Enident Planner</title>
+<meta name="description" content="Guida di Enident Planner, l'agenda per studi dentistici: 3. Pazienti.">
+<link rel="icon" type="image/svg+xml" href="/icona.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/stile.css">
+<style>
+main{max-width:52rem}
+.brand{max-width:52rem;display:flex;gap:.6rem;align-items:baseline}
+.brand .sez{font-weight:500;color:var(--ink)}
+footer{max-width:52rem}
+main img{max-width:100%;height:auto;border:1px solid var(--line);border-radius:.5rem;box-shadow:0 1px 3px rgba(34,27,22,.08)}
+main p img{vertical-align:top;margin:0 .4rem .4rem 0}
+a.img{display:inline-block}
+main a{overflow-wrap:anywhere}
+code{background:#FFF4EC;border-radius:.25rem;padding:.05rem .3rem;font-size:.9em}
+pre{background:#FFF4EC;border-radius:.5rem;padding:.8rem 1rem;overflow-x:auto;white-space:pre-wrap}
+pre code{padding:0;background:none}
+blockquote{background:#FFF4EC;border-left:4px solid var(--brand);padding:.6rem 1rem;margin:1rem 0;border-radius:0 .5rem .5rem 0}
+blockquote p{margin:.3rem 0}
+.tabella{overflow-x:auto}
+h3{font-size:1.08rem;margin:1.6rem 0 .4rem}
+h4{font-size:1rem;margin:1.3rem 0 .3rem}
+hr{border:0;border-top:1px solid var(--line);margin:2.5rem 0 1rem}
+.versione{color:var(--ink-soft);font-size:.9rem}
+</style>
+</head>
+<body>
+<header><div class="brand"><a href="/">Enident Planner</a><a class="sez" href="./">Guida</a></div></header>
+<main>
+<h1 id="3-pazienti">3. Pazienti</h1>
+<p>La pagina <strong>Pazienti</strong> contiene l&#39;archivio dello studio: a sinistra l&#39;elenco con la ricerca, a
+destra la scheda del paziente scelto.</p>
+<p><a class="img" href="img/pazienti.png"><img src="img/pazienti.png" alt="La scheda di un paziente" loading="lazy"></a></p>
+<h2 id="cercare-un-paziente">Cercare un paziente</h2>
+<ol>
+<li>Apri <strong>Pazienti</strong> dal menu in alto.</li>
+<li>Scrivi nella casella di ricerca una parte di nome, cognome, telefono (anche i numeri secondari),
+email o codice fiscale: l&#39;elenco si aggiorna mentre scrivi.</li>
+<li>Clic sul paziente per aprire la scheda. L&#39;elenco va a pagine; usa le frecce in fondo.</li>
+</ol>
+<h2 id="creare-un-paziente">Creare un paziente</h2>
+<ol>
+<li>Premi <strong>+ Nuovo paziente</strong>.</li>
+<li>Compila almeno <strong>Cognome</strong> e <strong>Nome</strong>; il resto è facoltativo.</li>
+<li>Premi <strong>Salva</strong>.</li>
+</ol>
+<p>Si può creare un paziente anche dall&#39;agenda, mentre fissi un appuntamento: nel campo Paziente
+scegli <strong>+ Nuovo paziente</strong> (vedi <a href="02-agenda.html">Agenda</a>).</p>
+<h2 id="l39anagrafica">L&#39;anagrafica</h2>
+<div class="tabella"><table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>A cosa serve</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Telefoni</td>
+<td>Fino a tre numeri, ciascuno con una nota («cellulare», «madre», «casa»). Il numero segnato <strong>Promemoria</strong> è quello a cui partono SMS e WhatsApp. <strong>+ Aggiungi un numero</strong> e <strong>Rimuovi</strong> per gestirli.</td>
+</tr>
+<tr>
+<td>Email</td>
+<td>Per i promemoria via email.</td>
+</tr>
+<tr>
+<td>Codice fiscale</td>
+<td>Viene controllato (formato e carattere finale).</td>
+</tr>
+<tr>
+<td>Data di nascita, Sesso, Indirizzo</td>
+<td>Dati anagrafici.</td>
+</tr>
+<tr>
+<td>Canale preferito</td>
+<td>Dove ricevere i promemoria: WhatsApp, SMS, Email o <strong>Nessuno</strong> (il paziente non riceve promemoria).</td>
+</tr>
+<tr>
+<td>Consenso privacy del</td>
+<td>La data in cui il paziente ha firmato il consenso.</td>
+</tr>
+<tr>
+<td>Note</td>
+<td>Note libere (allergie, preferenze…).</td>
+</tr>
+</tbody></table>
+</div><p>Modifica i campi e premi <strong>Salva</strong>: si salvano solo i campi cambiati. I numeri di telefono si
+possono scrivere come vuoi (per esempio «333 123 4567»): Enident li salva con il prefisso +39.</p>
+<h2 id="storico-degli-appuntamenti">Storico degli appuntamenti</h2>
+<p>Sotto l&#39;anagrafica ci sono gli appuntamenti del paziente, dal più recente, con lo stato. Un clic
+porta all&#39;agenda su quel giorno con l&#39;appuntamento aperto. Se il paziente ha attese misurate
+compare anche la riga «Attesa in studio: in media … su … visite».</p>
+<p>Dalla scheda:</p>
+<ul>
+<li><strong>+ Nuovo appuntamento</strong> apre l&#39;agenda con il paziente già scelto;</li>
+<li><strong>Aggiungi alla lista d&#39;attesa</strong> lo mette in lista (vedi <a href="04-in-sospeso.html">In sospeso</a>);</li>
+<li>il riquadro <strong>Richiami</strong> mostra se c&#39;è da richiamarlo;</li>
+<li><strong>Messaggi</strong> elenca i promemoria e le risposte, con il testo inviato.</li>
+</ul>
+<h2 id="relazioni-tra-pazienti-famiglie">Relazioni tra pazienti (famiglie)</h2>
+<p>Per collegare genitori e figli, coniugi, tutori:</p>
+<ol>
+<li>Nella scheda, in <strong>Relazioni</strong>, premi <strong>Aggiungi relazione</strong>.</li>
+<li>Scegli il tipo (per esempio «Genitore di») e cerca l&#39;altro paziente.</li>
+<li>Salva. Nella scheda dell&#39;altro compare la relazione inversa («Figlio/a di»).</li>
+</ol>
+<p>Nello storico, l&#39;interruttore <strong>Anche i pazienti collegati</strong> mostra insieme gli appuntamenti di
+tutta la famiglia. I tipi di relazione si gestiscono in <strong>Impostazioni → Relazioni</strong>.</p>
+<h2 id="eliminare-un-paziente">Eliminare un paziente</h2>
+<p><strong>Elimina</strong>, in alto nella scheda (proprietario e amministratori), toglie il paziente dall&#39;archivio
+e dalle ricerche. I suoi appuntamenti restano in agenda. È una cancellazione «logica»: i dati
+restano conservati.</p>
+<h2 id="cancellazione-definitiva-gdpr">Cancellazione definitiva (GDPR)</h2>
+<p>Quando un paziente esercita il <strong>diritto all&#39;oblio</strong>, il proprietario dello studio può cancellarne
+i dati per sempre.</p>
+<ol>
+<li>Apri la scheda del paziente (anche se è già stato eliminato).</li>
+<li>In fondo, nel riquadro <strong>Cancellazione definitiva (GDPR)</strong>, premi il pulsante e leggi
+l&#39;avviso.</li>
+<li>Conferma.</li>
+</ol>
+<p>Cosa succede:</p>
+<ul>
+<li>anagrafica, recapiti, codice fiscale e note vengono cancellati; il paziente diventa «Paziente
+rimosso»;</li>
+<li>vengono cancellati anche i suoi dati in messaggi, lista d&#39;attesa, richiami e registro delle
+attività;</li>
+<li>gli appuntamenti restano (senza note) come «Paziente rimosso», per le statistiche; quelli futuri
+restano in agenda senza promemoria: se non servono, annullali a parte.</li>
+</ul>
+<p><strong>L&#39;operazione è irreversibile.</strong></p>
+<h2 id="esportare-i-dati-dello-studio">Esportare i dati dello studio</h2>
+<p>Per avere una copia di tutti i dati (per esempio per un controllo o per passare a un altro
+programma), il proprietario va in <strong>Impostazioni → Studio → Esporta i dati dello studio</strong>. In
+pochi minuti arriva per email il link a un archivio ZIP con pazienti, appuntamenti, operatori,
+stanze, messaggi, relazioni e richieste online in formato CSV (si apre con Excel). Il link vale
+48 ore.</p>
+<hr>
+<p><a href="02-agenda.html">← Agenda</a> · <a href="index.html">Indice</a> · <a href="04-in-sospeso.html">In sospeso →</a></p>
+</main>
+<footer>
+  <span>© <span id="anno"></span> Francesco Paolo Enia</span>
+  <a href="./">Indice della guida</a>
+  <a href="/download/">Scarica l'app</a>
+  <a href="/termini">Termini di servizio</a>
+  <a href="/privacy">Informativa privacy</a>
+</footer>
+<script>document.getElementById('anno').textContent=new Date().getFullYear();</script>
+</body>
+</html>

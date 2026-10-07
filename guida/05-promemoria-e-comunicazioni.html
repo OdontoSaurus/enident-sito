@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>5. Promemoria e comunicazioni – Guida di Enident Planner</title>
+<meta name="description" content="Guida di Enident Planner, l'agenda per studi dentistici: 5. Promemoria e comunicazioni.">
+<link rel="icon" type="image/svg+xml" href="/icona.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/stile.css">
+<style>
+main{max-width:52rem}
+.brand{max-width:52rem;display:flex;gap:.6rem;align-items:baseline}
+.brand .sez{font-weight:500;color:var(--ink)}
+footer{max-width:52rem}
+main img{max-width:100%;height:auto;border:1px solid var(--line);border-radius:.5rem;box-shadow:0 1px 3px rgba(34,27,22,.08)}
+main p img{vertical-align:top;margin:0 .4rem .4rem 0}
+a.img{display:inline-block}
+main a{overflow-wrap:anywhere}
+code{background:#FFF4EC;border-radius:.25rem;padding:.05rem .3rem;font-size:.9em}
+pre{background:#FFF4EC;border-radius:.5rem;padding:.8rem 1rem;overflow-x:auto;white-space:pre-wrap}
+pre code{padding:0;background:none}
+blockquote{background:#FFF4EC;border-left:4px solid var(--brand);padding:.6rem 1rem;margin:1rem 0;border-radius:0 .5rem .5rem 0}
+blockquote p{margin:.3rem 0}
+.tabella{overflow-x:auto}
+h3{font-size:1.08rem;margin:1.6rem 0 .4rem}
+h4{font-size:1rem;margin:1.3rem 0 .3rem}
+hr{border:0;border-top:1px solid var(--line);margin:2.5rem 0 1rem}
+.versione{color:var(--ink-soft);font-size:.9rem}
+</style>
+</head>
+<body>
+<header><div class="brand"><a href="/">Enident Planner</a><a class="sez" href="./">Guida</a></div></header>
+<main>
+<h1 id="5-promemoria-e-comunicazioni">5. Promemoria e comunicazioni</h1>
+<p>Enident ricorda gli appuntamenti ai pazienti per email, SMS o WhatsApp, da solo o quando lo chiedi
+tu, e raccoglie le loro risposte. Questo capitolo spiega i testi (template), le regole di invio
+automatico, l&#39;invio a mano e la pagina Comunicazioni. Per collegare SMS e WhatsApp vedi
+<a href="06-canali.html">Canali</a>.</p>
+<p>In breve:</p>
+<ol>
+<li>scrivi o controlla i testi in <strong>Impostazioni → Template</strong>;</li>
+<li>attiva una regola in <strong>Impostazioni → Promemoria</strong> (quella a 24 ore è già pronta, va solo
+accesa);</li>
+<li>controlla in <strong>Comunicazioni</strong> cosa è partito e cosa hanno risposto i pazienti.</li>
+</ol>
+<h2 id="i-template-i-testi-dei-messaggi">I template: i testi dei messaggi</h2>
+<p><a class="img" href="img/impostazioni-template.png"><img src="img/impostazioni-template.png" alt="Impostazioni → Template, scheda Email" loading="lazy"></a></p>
+<p>In <strong>Impostazioni → Template</strong> ci sono tre schede: <strong>Email</strong>, <strong>SMS</strong> e <strong>WhatsApp</strong>. Ogni studio
+nasce con due template per l&#39;email e due per l&#39;SMS: «Promemoria standard» (il preferito, con la
+★) e «Richiesta di conferma».</p>
+<h3 id="scrivere-o-modificare-un-template-email-e-sms">Scrivere o modificare un template (email e SMS)</h3>
+<ol>
+<li>Apri la scheda del canale e il template, oppure premi <strong>Nuovo template</strong>.</li>
+<li>Scrivi il <strong>Nome</strong>, l&#39;<strong>Oggetto</strong> (solo email) e il <strong>Testo</strong>.</li>
+<li>Inserisci i dati del paziente e dell&#39;appuntamento con i <strong>segnaposto</strong>: un clic su un segnaposto
+lo inserisce dove si trova il cursore.</li>
+<li>Controlla l&#39;<strong>Anteprima</strong>, che mostra il testo con un appuntamento vero dello studio.</li>
+<li>Premi <strong>Salva</strong>.</li>
+</ol>
+<div class="tabella"><table>
+<thead>
+<tr>
+<th>Segnaposto</th>
+<th>Diventa</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>{nome}</code>, <code>{cognome}</code></td>
+<td>Nome e cognome del paziente</td>
+</tr>
+<tr>
+<td><code>{data_nascita}</code></td>
+<td>Data di nascita del paziente</td>
+</tr>
+<tr>
+<td><code>{data}</code></td>
+<td>Giorno e data dell&#39;appuntamento (es. lunedì 5 ottobre)</td>
+</tr>
+<tr>
+<td><code>{giorno_settimana}</code></td>
+<td>Giorno della settimana (es. lunedì)</td>
+</tr>
+<tr>
+<td><code>{data_appuntamento}</code></td>
+<td>Data dell&#39;appuntamento (es. 05 ottobre 2026)</td>
+</tr>
+<tr>
+<td><code>{ora}</code></td>
+<td>Ora dell&#39;appuntamento</td>
+</tr>
+<tr>
+<td><code>{operatore}</code></td>
+<td>Operatore dell&#39;appuntamento</td>
+</tr>
+<tr>
+<td><code>{studio}</code></td>
+<td>Nome dello studio</td>
+</tr>
+<tr>
+<td><code>{telefono_studio}</code>, <code>{indirizzo_studio}</code>, <code>{email_studio}</code></td>
+<td>Recapiti dello studio (da Impostazioni → Studio)</td>
+</tr>
+</tbody></table>
+</div><p>Se un segnaposto dello studio resterebbe vuoto (per esempio manca il telefono dello studio),
+Enident lo segnala con il collegamento a Impostazioni → Studio.</p>
+<p><a class="img" href="img/impostazioni-template-sms.png"><img src="img/impostazioni-template-sms.png" alt="Un template SMS con il conteggio dei caratteri" loading="lazy"></a></p>
+<p><strong>SMS:</strong> sotto il testo vedi i caratteri e quanti SMS servono (ogni SMS costa). Un SMS contiene
+160 caratteri; le lettere accentate lo riducono a 70, quindi meglio evitarle (i template di Enident
+le evitano). Massimo 480 caratteri.</p>
+<p>Altre azioni: <strong>Segna come preferito</strong> (il template proposto per le nuove regole e per l&#39;invio a
+mano), <strong>Duplica</strong>, <strong>Elimina</strong> (non per il preferito né per quelli usati da una regola).</p>
+<h3 id="i-modelli-whatsapp">I modelli WhatsApp</h3>
+<p>WhatsApp consegna i promemoria solo con <strong>modelli approvati</strong> da WhatsApp. Nella scheda WhatsApp,
+dopo aver collegato WhatsApp (vedi <a href="06-canali.html">Canali</a>):</p>
+<ol>
+<li>Premi <strong>Nuovo modello</strong>.</li>
+<li>Scrivi il nome (minuscole, numeri e _, es. <code>promemoria_appuntamento</code>), la lingua e il testo con
+i segnaposto cliccabili (sono disponibili anche <code>{tipo}</code>, il tipo di appuntamento). Il testo non
+deve iniziare né finire con un segnaposto.</li>
+<li>Premi <strong>Invia in approvazione</strong>. Di solito l&#39;esito arriva in pochi minuti, al massimo un giorno:
+premi <strong>Aggiorna</strong> per vedere lo stato (In revisione, Approvato, Rifiutato con il motivo).</li>
+<li>Quando è approvato, <strong>Segna come preferito</strong>.</li>
+</ol>
+<p>Un modello approvato non si modifica: per cambiare il testo se ne crea uno nuovo. Con Twilio puoi
+anche registrare un modello già creato su Twilio, con il suo <strong>Content SID</strong>.</p>
+<h2 id="le-regole-dell39invio-automatico">Le regole dell&#39;invio automatico</h2>
+<p><a class="img" href="img/impostazioni-promemoria.png"><img src="img/impostazioni-promemoria.png" alt="Impostazioni → Promemoria" loading="lazy"></a></p>
+<p>In <strong>Impostazioni → Promemoria</strong> (proprietario e amministratori) ogni regola dice <strong>quando</strong>, <strong>su
+quale canale</strong> e <strong>con quale template</strong> parte il promemoria.</p>
+<ol>
+<li>Spunta <strong>Attiva</strong>.</li>
+<li><strong>Quando inviarlo:</strong><ul>
+<li><strong>N ore prima dell&#39;appuntamento</strong> (da 1 a 72), oppure</li>
+<li><strong>a un&#39;ora precisa</strong>: il giorno dell&#39;appuntamento, il giorno prima o fino a 7 giorni prima,
+alle ore che scegli (es. «il giorno prima alle 10:00»).</li>
+</ul>
+</li>
+<li><strong>Canale:</strong> di solito <strong>Canale preferito del paziente</strong> (quello della sua scheda); oppure
+sempre Email, SMS o WhatsApp.</li>
+<li><strong>Template per canale:</strong> uno per l&#39;email, uno per l&#39;SMS e il modello WhatsApp (o «il preferito
+al momento dell&#39;invio»).</li>
+<li>Premi <strong>Salva</strong>.</li>
+</ol>
+<p>Puoi avere più regole, per esempio una a 3 giorni per email e una il giorno prima per WhatsApp.
+<strong>Nuova regola</strong> ne aggiunge una.</p>
+<p>Da sapere:</p>
+<ul>
+<li>partono solo per gli appuntamenti <strong>prenotati o confermati</strong>;</li>
+<li>un appuntamento preso con meno anticipo di quello della regola non riceve il promemoria;</li>
+<li>se l&#39;appuntamento viene spostato, il promemoria segue il nuovo orario; se viene annullato, il
+promemoria non parte;</li>
+<li>i pazienti con canale preferito «Nessuno» non ricevono nulla;</li>
+<li>accendendo una regola non partono promemoria «arretrati» per appuntamenti già troppo vicini;</li>
+<li>modificare un template vale anche per i promemoria già programmati;</li>
+<li>SMS e WhatsApp sono compresi nei piani Studio e Multi studio; le email in tutti.</li>
+</ul>
+<p>In agenda la <strong>campanella</strong> su un appuntamento indica che il promemoria è partito.</p>
+<h2 id="inviare-un-promemoria-a-mano">Inviare un promemoria a mano</h2>
+<h3 id="a-un-paziente">A un paziente</h3>
+<p><a class="img" href="img/invia-promemoria.png"><img src="img/invia-promemoria.png" alt="Invia il promemoria" loading="lazy"></a></p>
+<ol>
+<li>Clic destro sull&#39;appuntamento → <strong>Invia promemoria…</strong> (oppure, nel dettaglio, <strong>Invia ora</strong> nel
+riquadro Promemoria).</li>
+<li>Scegli il <strong>Canale</strong>: quelli non disponibili sono disattivati con il motivo (per esempio manca
+l&#39;email); il preferito del paziente è segnato.</li>
+<li>Scegli il <strong>Template</strong>. Per email e SMS puoi ritoccare il testo prima di inviare; il testo di
+WhatsApp è quello del modello approvato e non si modifica.</li>
+<li>Premi <strong>Invia</strong>. Il messaggio parte entro mezzo minuto.</li>
+</ol>
+<p>Si può fare per appuntamenti prenotati o confermati non ancora iniziati.</p>
+<h3 id="a-tutti-i-pazienti-del-giorno">A tutti i pazienti del giorno</h3>
+<p><a class="img" href="img/promemoria-giornata.png"><img src="img/promemoria-giornata.png" alt="Promemoria del giorno" loading="lazy"></a></p>
+<ol>
+<li>In una vista giornaliera dell&#39;agenda premi <strong>Promemoria del giorno</strong>.</li>
+<li>Scegli il canale (anche «Canale preferito del paziente») e, se fisso, il template.</li>
+<li>Controlla l&#39;elenco: chi ha già ricevuto il promemoria o non è raggiungibile parte deselezionato,
+con il motivo.</li>
+<li>Premi <strong>Invia i promemoria (n)</strong>. Alla fine Enident dice quanti sono partiti e quanti no.</li>
+</ol>
+<h2 id="la-pagina-comunicazioni">La pagina Comunicazioni</h2>
+<p><strong>Comunicazioni</strong>, nel menu in alto, è il registro di tutto quello che lo studio ha inviato e
+ricevuto. Ha due schede.</p>
+<h3 id="messaggi-inviati">Messaggi inviati</h3>
+<p><a class="img" href="img/comunicazioni.png"><img src="img/comunicazioni.png" alt="Comunicazioni, messaggi inviati" loading="lazy"></a></p>
+<ul>
+<li>In alto i numeri degli ultimi 7 giorni: <strong>Inviati</strong>, <strong>Falliti</strong>, <strong>Saltati</strong>, <strong>In coda</strong>. Un
+clic su un numero filtra l&#39;elenco.</li>
+<li>I filtri: periodo, canale, esito, destinatario (email o numero). Dalla scheda di un paziente
+l&#39;elenco si apre già filtrato su di lui.</li>
+<li>Ogni riga ha data, canale, destinatario, paziente, tipo (<strong>Promemoria</strong>, <strong>Manuale</strong>,
+<strong>Transazionale</strong>, cioè le email automatiche come le conferme) ed esito. Un clic sulla riga mostra
+i dettagli: testo inviato, motivo, errore del provider, stato di consegna, risposta del paziente.</li>
+</ul>
+<div class="tabella"><table>
+<thead>
+<tr>
+<th>Esito</th>
+<th>Significato</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>In coda</td>
+<td>Sta per partire</td>
+</tr>
+<tr>
+<td>Inviato</td>
+<td>Partito</td>
+</tr>
+<tr>
+<td>Consegnato / Letto</td>
+<td>Arrivato sul telefono / letto (SMS e WhatsApp, quando il provider lo comunica)</td>
+</tr>
+<tr>
+<td>Fallito</td>
+<td>Il provider non è riuscito a consegnarlo</td>
+</tr>
+<tr>
+<td>Saltato</td>
+<td>Non è partito, per un motivo indicato (es. manca il recapito, canale non configurato)</td>
+</tr>
+<tr>
+<td>Annullato</td>
+<td>Non serviva più (es. appuntamento annullato)</td>
+</tr>
+</tbody></table>
+</div><p><strong>Riprova</strong> rimanda un promemoria fallito o saltato, quando il motivo è stato risolto (per esempio
+dopo aver aggiunto il numero nella scheda); <strong>Riprova tutti i falliti del periodo</strong> lo fa per tutti
+quelli filtrati. Se il motivo non è ancora risolto, Enident lo dice e non invia nulla.</p>
+<p>Il numero rosso accanto a <strong>Comunicazioni</strong> nel menu somma i messaggi falliti o saltati che la tua
+postazione non ha ancora visto e le risposte da leggere.</p>
+<h3 id="risposte-dei-pazienti">Risposte dei pazienti</h3>
+<p><a class="img" href="img/risposte.png"><img src="img/risposte.png" alt="Risposte dei pazienti" loading="lazy"></a></p>
+<p>Le risposte agli SMS e ai WhatsApp arrivano qui. Enident le legge:</p>
+<ul>
+<li><strong>«Sì», «Ok», «Confermo», 👍…</strong> → l&#39;appuntamento diventa <strong>confermato</strong>. Le conferme senza altro
+testo si segnano lette da sole.</li>
+<li><strong>«No», «Non posso», «Disdico»…</strong> → il paziente va in <strong>Da richiamare</strong>.</li>
+<li>Domande e frasi non chiare non cambiano nulla e restano <strong>da leggere</strong>.</li>
+</ul>
+<p>Per ogni risposta:</p>
+<ol>
+<li>leggi il testo, il paziente e l&#39;appuntamento collegato;</li>
+<li>se serve, premi <strong>Rispondi…</strong>: si apre la conversazione con il paziente e puoi scrivergli un SMS
+o un WhatsApp (su WhatsApp solo entro 24 ore dal suo ultimo messaggio: la finestra lo indica);</li>
+<li>premi <strong>Segna come letta</strong> (o <strong>Segna tutte come lette</strong>).</li>
+</ol>
+<hr>
+<p><a href="04-in-sospeso.html">← In sospeso</a> · <a href="index.html">Indice</a> · <a href="06-canali.html">Canali →</a></p>
+</main>
+<footer>
+  <span>© <span id="anno"></span> Francesco Paolo Enia</span>
+  <a href="./">Indice della guida</a>
+  <a href="/download/">Scarica l'app</a>
+  <a href="/termini">Termini di servizio</a>
+  <a href="/privacy">Informativa privacy</a>
+</footer>
+<script>document.getElementById('anno').textContent=new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>6. Canali: email, SMS e WhatsApp – Guida di Enident Planner</title>
+<meta name="description" content="Guida di Enident Planner, l'agenda per studi dentistici: 6. Canali: email, SMS e WhatsApp.">
+<link rel="icon" type="image/svg+xml" href="/icona.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/stile.css">
+<style>
+main{max-width:52rem}
+.brand{max-width:52rem;display:flex;gap:.6rem;align-items:baseline}
+.brand .sez{font-weight:500;color:var(--ink)}
+footer{max-width:52rem}
+main img{max-width:100%;height:auto;border:1px solid var(--line);border-radius:.5rem;box-shadow:0 1px 3px rgba(34,27,22,.08)}
+main p img{vertical-align:top;margin:0 .4rem .4rem 0}
+a.img{display:inline-block}
+main a{overflow-wrap:anywhere}
+code{background:#FFF4EC;border-radius:.25rem;padding:.05rem .3rem;font-size:.9em}
+pre{background:#FFF4EC;border-radius:.5rem;padding:.8rem 1rem;overflow-x:auto;white-space:pre-wrap}
+pre code{padding:0;background:none}
+blockquote{background:#FFF4EC;border-left:4px solid var(--brand);padding:.6rem 1rem;margin:1rem 0;border-radius:0 .5rem .5rem 0}
+blockquote p{margin:.3rem 0}
+.tabella{overflow-x:auto}
+h3{font-size:1.08rem;margin:1.6rem 0 .4rem}
+h4{font-size:1rem;margin:1.3rem 0 .3rem}
+hr{border:0;border-top:1px solid var(--line);margin:2.5rem 0 1rem}
+.versione{color:var(--ink-soft);font-size:.9rem}
+</style>
+</head>
+<body>
+<header><div class="brand"><a href="/">Enident Planner</a><a class="sez" href="./">Guida</a></div></header>
+<main>
+<h1 id="6-canali-email-sms-e-whatsapp">6. Canali: email, SMS e WhatsApp</h1>
+<p>I promemoria e le altre comunicazioni ai pazienti partono su tre canali: <strong>email</strong>, <strong>SMS</strong> e
+<strong>WhatsApp</strong>. Questo capitolo spiega cosa serve per ciascuno e come collegarlo. I testi dei
+messaggi si scrivono in Impostazioni → Template (vedi il capitolo
+<a href="05-promemoria-e-comunicazioni.html">Promemoria e comunicazioni</a>).</p>
+<div class="tabella"><table>
+<thead>
+<tr>
+<th>Canale</th>
+<th>Cosa serve</th>
+<th>Piano</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Email</td>
+<td>Niente: parte da Enident, a nome dello studio</td>
+<td>Tutti i piani</td>
+</tr>
+<tr>
+<td>SMS</td>
+<td>Un account Twilio dello studio</td>
+<td>Studio e Multi studio</td>
+</tr>
+<tr>
+<td>WhatsApp</td>
+<td>Un account Twilio oppure un&#39;app Meta dello studio, con un numero dedicato</td>
+<td>Studio e Multi studio</td>
+</tr>
+</tbody></table>
+</div><p>Le pagine SMS e WhatsApp si trovano in <strong>Impostazioni → SMS</strong> e <strong>Impostazioni → WhatsApp</strong> e le
+vedono il proprietario e gli amministratori. Ciascuna pagina contiene la stessa guida passo passo
+riportata qui sotto, con i link alle pagine giuste e i pulsanti per copiare i valori.</p>
+<blockquote>
+<p><strong>Le risposte dei pazienti.</strong> Se il paziente risponde a un SMS o a un WhatsApp, la risposta
+arriva in Enident: «Sì» conferma l&#39;appuntamento, «No» lo mette nella lista «Da richiamare».
+Con l&#39;SMS questo funziona solo se il mittente è un numero (non un nome): vedi il passo 4 della
+guida SMS.</p>
+</blockquote>
+<h2 id="email">Email</h2>
+<p>Le email non richiedono alcuna configurazione: partono dai server di Enident. In fondo a ogni
+promemoria compaiono il nome, l&#39;indirizzo e il telefono dello studio, presi da
+<strong>Impostazioni → Studio</strong>: tienili aggiornati.</p>
+<p>Il paziente riceve l&#39;email solo se nella sua scheda c&#39;è l&#39;indirizzo email e come canale preferito
+ha «Email» (oppure se scegli il canale email nella regola o nell&#39;invio manuale).</p>
+<h2 id="sms-con-twilio">SMS con Twilio</h2>
+<p>Con un account Twilio dello studio gli SMS dei promemoria partono a nome dello studio. Se il
+mittente è un numero, le risposte dei pazienti arrivano in Enident: SI conferma l&#39;appuntamento, NO
+lo segna da richiamare.</p>
+<p><a class="img" href="img/impostazioni-sms.png"><img src="img/impostazioni-sms.png" alt="La pagina Impostazioni → SMS" loading="lazy"></a></p>
+<h3 id="guida-passo-passo-twilio-sms">Guida passo passo (Twilio, SMS)</h3>
+<p>I menu della Console di Twilio (Home, Communications, Orchestration, Data, Identity, Builder
+tools, Monitor, Billing, Settings) cambiano spesso: la via più affidabile è la barra di ricerca in
+alto nella Console, con il nome della pagina indicato in ogni passo. I link portano direttamente
+alla pagina (serve essere collegati a Twilio).</p>
+<ol>
+<li><p><strong>Crea l&#39;account Twilio e attivalo.</strong>
+Registrati su twilio.com e verifica email e cellulare. Poi, in Billing, aggiungi un metodo di
+pagamento e fai la prima ricarica: l&#39;account in prova scrive solo ai numeri verificati, aggiunge
+«Sent from your Twilio trial account» a ogni messaggio e non può registrare mittenti.</p>
+<ul>
+<li>Registrazione: <a href="https://www.twilio.com/try-twilio" target="_blank" rel="noopener">https://www.twilio.com/try-twilio</a></li>
+<li>Cerca nella Console: <strong>Billing</strong> — <a href="https://console.twilio.com/us1/billing/manage-billing/billing-overview" target="_blank" rel="noopener">https://console.twilio.com/us1/billing/manage-billing/billing-overview</a></li>
+<li>Tempo previsto: 10 minuti.</li>
+</ul>
+</li>
+<li><p><strong>Verifica l&#39;identità nel Trust Hub.</strong>
+In Identity → Trust Hub → Customer Profiles crea il profilo principale (Primary Customer
+Profile) con i dati anagrafici o societari dello studio, carica un documento d&#39;identità del
+titolare e indica un contatto. Twilio lo approva in 1–3 giorni lavorativi.
+Finché il profilo non è approvato gli invii falliscono con l&#39;errore <strong>20003</strong>.</p>
+<ul>
+<li>Cerca nella Console: <strong>Customer Profiles</strong> — <a href="https://console.twilio.com/us1/account/trust-hub/customer-profiles" target="_blank" rel="noopener">https://console.twilio.com/us1/account/trust-hub/customer-profiles</a></li>
+<li>Tempo previsto: 15 minuti, più 1–3 giorni lavorativi di approvazione.</li>
+</ul>
+</li>
+<li><p><strong>Account SID e Auth Token.</strong>
+Nella Home della Console, nel riquadro con il nome del tuo account, trovi l&#39;Account SID (inizia
+con AC) e l&#39;Auth Token (clic su «Show»): copiali nei campi della pagina.</p>
+<ul>
+<li>Console: <a href="https://console.twilio.com" target="_blank" rel="noopener">https://console.twilio.com</a></li>
+<li>Tempo previsto: 2 minuti.</li>
+</ul>
+</li>
+<li><p><strong>Mittente degli SMS.</strong> Due possibilità:</p>
+<ul>
+<li><strong>Nome dello studio (consigliato).</strong> Gli SMS arrivano con il nome dello studio come mittente,
+senza acquistare numeri: al massimo 11 caratteri, lettere senza accenti e cifre, niente spazi
+(es. StudioRossi). Scrivilo nel campo «Mittente SMS». Per alcuni paesi, Italia compresa,
+Twilio chiede di registrare il nome: segui la pagina.
+Cerca nella Console: <strong>Alphanumeric Sender ID</strong>. Tempo previsto: 5 minuti; se va registrato,
+alcuni giorni di approvazione.</li>
+<li><strong>Numero a pagamento.</strong> A un mittente con nome i pazienti non possono rispondere. Se vuoi le
+conferme SI/NO anche via SMS compra un numero con SMS abilitati (costo mensile) e usalo come
+mittente.
+Cerca nella Console: <strong>Buy a number</strong> — <a href="https://console.twilio.com/us1/develop/phone-numbers/manage/search" target="_blank" rel="noopener">https://console.twilio.com/us1/develop/phone-numbers/manage/search</a>.
+Poi apri il numero in «Active numbers» e nella sezione «Messaging», alla voce «A message
+comes in», incolla l&#39;<strong>indirizzo delle risposte</strong> (lo trovi nella pagina con il pulsante
+Copia; in produzione è <code>https://api.enident.it/api/v1/messaging/twilio/risposta</code>) con il
+metodo HTTP POST. Tempo previsto: 10 minuti.</li>
+</ul>
+<p>L&#39;indirizzo degli stati di consegna degli SMS non serve impostarlo: Enident lo manda con ogni
+messaggio.</p>
+</li>
+</ol>
+<h3 id="credenziali-e-prova">Credenziali e prova</h3>
+<ol>
+<li>In <strong>Credenziali Twilio degli SMS</strong> compila <strong>Account SID</strong>, <strong>Auth Token</strong> e <strong>Mittente SMS
+(nome senza spazi o numero)</strong>. L&#39;Auth Token, una volta salvato, non si vede più: lascia il campo
+vuoto per non cambiarlo.</li>
+<li>Spunta <strong>Invia gli SMS con questo account</strong>.</li>
+<li>Premi <strong>Salva e verifica</strong>: Enident controlla le credenziali con Twilio e mostra «Credenziali
+verificate e impostazioni salvate.». Se Twilio non risponde entro 15 secondi, le credenziali non
+vengono salvate: riprova.</li>
+<li>In <strong>Messaggio di prova</strong> scrivi il tuo cellulare e premi <strong>Invia SMS di prova</strong>.</li>
+</ol>
+<p>Per togliere tutto c&#39;è <strong>Rimuovi configurazione</strong> in fondo alla pagina: cancella le credenziali e
+spegne il canale; i messaggi già inviati restano in Comunicazioni, quelli ancora in coda non
+partono.</p>
+<h3 id="errori-comuni-sms">Errori comuni (SMS)</h3>
+<div class="tabella"><table>
+<thead>
+<tr>
+<th>Codice</th>
+<th>Significato e rimedio</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>20003</td>
+<td>Autorizzazione negata: il profilo del Trust Hub non è ancora approvato (passo 2), oppure Account SID e Auth Token non corrispondono. Controlla lo stato del profilo e ricopia le credenziali.</td>
+</tr>
+<tr>
+<td>21211</td>
+<td>Numero del destinatario non valido: controlla il cellulare nella scheda del paziente (o quello della prova), con il prefisso internazionale (+39…).</td>
+</tr>
+</tbody></table>
+</div><h2 id="whatsapp">WhatsApp</h2>
+<p>I promemoria WhatsApp partono dal numero WhatsApp dello studio, con Twilio oppure direttamente con
+Meta. Le risposte dei pazienti arrivano in Enident: SI conferma l&#39;appuntamento, NO lo segna da
+richiamare.</p>
+<p><a class="img" href="img/impostazioni-whatsapp.png"><img src="img/impostazioni-whatsapp.png" alt="La pagina Impostazioni → WhatsApp" loading="lazy"></a></p>
+<p>In cima alla pagina si sceglie <strong>con chi inviare i WhatsApp</strong>:</p>
+<ul>
+<li><strong>Twilio</strong>: il WhatsApp con Twilio; l&#39;account può essere lo stesso degli SMS o un altro.</li>
+<li><strong>Meta WhatsApp Cloud API</strong>: direttamente con Meta, senza intermediari: un&#39;app Meta dello studio
+con il prodotto WhatsApp e un numero dedicato. Si paga Meta per le conversazioni avviate con i
+template.</li>
+</ul>
+<p>Salvando con l&#39;altro provider, i WhatsApp partiranno da lì. Le credenziali del provider di prima
+restano salvate, se vuoi tornare indietro.</p>
+<blockquote>
+<p><strong>Perché servono i modelli.</strong> WhatsApp consente di scrivere per primi solo con <strong>modelli
+approvati</strong> (template). Un messaggio libero arriva solo a chi ha scritto allo studio nelle ultime
+24 ore. I modelli si creano e si scelgono in <strong>Impostazioni → Template → WhatsApp</strong>.</p>
+</blockquote>
+<h3 id="whatsapp-con-twilio-guida-passo-passo">WhatsApp con Twilio: guida passo passo</h3>
+<p>I menu della Console di Twilio cambiano spesso: usa la barra di ricerca in alto nella Console con
+il nome indicato in ogni passo.</p>
+<ol>
+<li><p><strong>Account Twilio, Account SID e Auth Token.</strong>
+Serve un account Twilio attivo e verificato (vedi la guida SMS qui sopra, passi 1 e 2). Nella
+Home della Console copia l&#39;Account SID (inizia con AC) e l&#39;Auth Token: possono essere gli stessi
+degli SMS o di un altro account. Tempo previsto: 2 minuti.</p>
+</li>
+<li><p><strong>WhatsApp di prova (sandbox).</strong>
+Per provare subito WhatsApp: la pagina del sandbox mostra il numero WhatsApp di Twilio (mettilo
+nel campo «Numero WhatsApp») e la parola di adesione. Ogni telefono di prova manda a quel numero
+«join &lt;parola&gt;» e riceve i messaggi per 72 ore, poi deve aderire di nuovo. Solo per le
+prove, non per i pazienti.</p>
+<ul>
+<li>Cerca nella Console: <strong>WhatsApp sandbox</strong> — <a href="https://console.twilio.com/us1/develop/sms/try-it-out/whatsapp-learn" target="_blank" rel="noopener">https://console.twilio.com/us1/develop/sms/try-it-out/whatsapp-learn</a></li>
+<li>Nelle impostazioni del sandbox incolla l&#39;<strong>indirizzo delle risposte</strong> in «When a message comes
+in» e quello degli <strong>stati di consegna</strong> in «Status callback URL», entrambi con il metodo POST
+(i due indirizzi sono nella pagina, con il pulsante Copia).</li>
+<li>Cerca nella Console: <strong>WhatsApp sandbox settings</strong> — <a href="https://console.twilio.com/us1/develop/sms/settings/whatsapp-sandbox" target="_blank" rel="noopener">https://console.twilio.com/us1/develop/sms/settings/whatsapp-sandbox</a></li>
+<li>Tempo previsto: 5 minuti.</li>
+</ul>
+</li>
+<li><p><strong>WhatsApp definitivo.</strong>
+In Communications → Messaging → Senders → «WhatsApp Senders» registra il mittente dello
+studio. Servono un numero non usato su WhatsApp (neanche nell&#39;app WhatsApp Business: va prima
+tolto) e un Meta Business Manager gratuito, che colleghi durante la procedura.
+È il passo più lungo: Meta può chiedere di verificare l&#39;attività dello studio con i documenti, e
+il nome visualizzato va approvato. Intanto puoi usare il sandbox del passo 2.</p>
+<ul>
+<li>Cerca nella Console: <strong>WhatsApp Senders</strong> — <a href="https://console.twilio.com/us1/develop/sms/senders/whatsapp-senders" target="_blank" rel="noopener">https://console.twilio.com/us1/develop/sms/senders/whatsapp-senders</a></li>
+<li>Nelle impostazioni del mittente incolla l&#39;indirizzo delle risposte come webhook dei messaggi
+in arrivo e quello degli stati come «Status callback URL».</li>
+<li>Tempo previsto: 1 ora di lavoro, più da qualche giorno a 2 settimane di verifiche di Meta.</li>
+</ul>
+</li>
+<li><p><strong>Template del promemoria.</strong>
+WhatsApp consente di scrivere per primi solo con template approvati. In «Content Template
+Builder» crea un template di tipo «Text», lingua italiano, con questo testo:</p>
+<pre><code>Buongiorno {{1}}, le ricordiamo l&#39;appuntamento presso {{2}} il {{3}} alle {{4}}. Risponda SI per confermare o NO se non può venire.
+</code></pre>
+<p>I segnaposto vanno in quest&#39;ordine: <code>{{1}}</code> nome del paziente, <code>{{2}}</code> nome dello studio,
+<code>{{3}}</code> data dell&#39;appuntamento, <code>{{4}}</code> ora dell&#39;appuntamento.</p>
+<ul>
+<li>Cerca nella Console: <strong>Content Template Builder</strong> — <a href="https://console.twilio.com/us1/develop/sms/content-template-builder" target="_blank" rel="noopener">https://console.twilio.com/us1/develop/sms/content-template-builder</a></li>
+<li>Puoi anche crearlo e mandarlo in approvazione direttamente da Enident, in Impostazioni →
+Template → WhatsApp, dopo aver salvato le credenziali.</li>
+<li>Invialo per l&#39;approvazione di WhatsApp. Il Content SID (inizia con HX) compare sotto il nome
+del template: registralo in Impostazioni → Template → WhatsApp → «Modello già esistente su
+Twilio». Senza template i promemoria WhatsApp arrivano solo a chi ha scritto allo studio nelle
+ultime 24 ore.</li>
+<li>Tempo previsto: 10 minuti, più di solito meno di un giorno di approvazione.</li>
+</ul>
+</li>
+</ol>
+<p>Poi, in <strong>Credenziali Twilio di WhatsApp</strong>: Account SID, Auth Token e Numero WhatsApp, spunta
+<strong>Invia i WhatsApp con questo account</strong> e premi <strong>Salva e verifica</strong>. Con <strong>Invia WhatsApp di
+prova</strong> controlli che tutto arrivi.</p>
+<h4 id="errori-comuni-whatsapp-con-twilio">Errori comuni (WhatsApp con Twilio)</h4>
+<div class="tabella"><table>
+<thead>
+<tr>
+<th>Codice</th>
+<th>Significato e rimedio</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>20003</td>
+<td>Autorizzazione negata: il profilo del Trust Hub non è ancora approvato, oppure Account SID e Auth Token non corrispondono. Controlla lo stato del profilo e ricopia le credenziali.</td>
+</tr>
+<tr>
+<td>63016</td>
+<td>Messaggio WhatsApp fuori dalla finestra di 24 ore senza un template approvato: controlla che il template sia approvato (passo 4) e che sia registrato in Impostazioni → Template → WhatsApp.</td>
+</tr>
+</tbody></table>
+</div><h3 id="whatsapp-con-meta-collegamento-passo-passo">WhatsApp con Meta: collegamento passo passo</h3>
+<h4 id="prima-di-iniziare">Prima di iniziare</h4>
+<p>Il collegamento richiede circa un&#39;ora, non costa nulla finché non si inviano messaggi, e si fa una
+volta sola. Alla fine Enident invia i promemoria dal numero dello studio e riceve le risposte dei
+pazienti.</p>
+<p>Cosa serve:</p>
+<ul>
+<li>un account Facebook personale del titolare o di chi gestisce la pagina dello studio (serve solo
+per accedere agli strumenti Meta, i pazienti non lo vedono);</li>
+<li>il portfolio business dello studio su Meta: se lo studio ha già una pagina Facebook o Instagram
+gestita da Business Suite, esiste già; altrimenti si crea al passo 1;</li>
+<li>un numero di telefono mai usato su WhatsApp che possa ricevere una chiamata: il fisso dello
+studio è l&#39;ideale. Il numero già usato con l&#39;app WhatsApp Business sul telefono non va spostato
+qui: resta sul telefono;</li>
+<li>una carta o un conto per il metodo di pagamento Meta: si paga solo per i promemoria inviati,
+pochi centesimi l&#39;uno;</li>
+<li>la visura camerale o un documento fiscale dello studio con ragione sociale e indirizzo, per la
+verifica dell&#39;azienda (facoltativa all&#39;inizio, necessaria per togliere i limiti).</li>
+</ul>
+<p>Tieni aperta la pagina Impostazioni → WhatsApp con il provider Meta scelto: alcuni valori si
+copiano da Meta nei campi delle credenziali, altri dalla pagina a Meta.</p>
+<blockquote>
+<p>I menu di Meta cambiano nome spesso: se una voce non corrisponde, usa la casella di ricerca in
+alto nelle pagine Meta con il nome indicato.</p>
+</blockquote>
+<h4 id="1-portfolio-business-dello-studio-e-dati-aziendali">1. Portfolio business dello studio e dati aziendali</h4>
+<p>Il portfolio business è il contenitore Meta che possiede il numero WhatsApp, l&#39;app e il metodo di
+pagamento dello studio.</p>
+<ol>
+<li>Apri <a href="https://business.facebook.com/settings" target="_blank" rel="noopener">https://business.facebook.com/settings</a> con il Facebook personale. Si apre Business
+Manager → Seleziona Business Manager con l&#39;elenco dei portfolio a cui hai accesso.</li>
+<li>Scegli il portfolio dello studio (quello con la pagina Facebook e gli account pubblicitari dello
+studio). Se non ne esiste uno, clicca Crea account business: nome = ragione sociale dello
+studio, nome e email del titolare.</li>
+<li>Si apre Impostazioni del portfolio, con il menu a sinistra: Informazioni business, Utenti
+(Persone, Partner, Utenti di sistema), Account (Pagine, Account pubblicitari, App, Account
+WhatsApp…), Origini dei dati, e più in basso Centro sicurezza e Pagamenti. Salva questo
+indirizzo nei preferiti: ci tornerai nei passi 4 e 7.</li>
+<li>Clicca Informazioni business (<a href="https://business.facebook.com/settings/info" target="_blank" rel="noopener">https://business.facebook.com/settings/info</a>) e controlla o
+compila:<ul>
+<li>Nome legale: la ragione sociale esatta dello studio, come sulla visura;</li>
+<li>Indirizzo e telefono dello studio;</li>
+<li>Codice di identificazione fiscale (EIN): la partita IVA dello studio, 11 cifre senza «IT» (il
+nome del campo è americano, ma vale per qualunque codice fiscale aziendale);</li>
+<li>Sito web: facoltativo; se lo studio non ne ha, lascia vuoto oppure usa il link della pagina di
+prenotazione online di Enident o della pagina Facebook.</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>Questi dati devono coincidere con il documento che caricherai per la verifica al passo 7.</p>
+</blockquote>
+<h4 id="2-account-sviluppatore-e-app-whatsapp-dello-studio">2. Account sviluppatore e app WhatsApp dello studio</h4>
+<p>L&#39;«app» è il canale tecnico con cui Enident parla con WhatsApp per conto dello studio. È privata
+dello studio: nessun paziente la vede.</p>
+<ol>
+<li>Vai su <a href="https://developers.facebook.com/" target="_blank" rel="noopener">https://developers.facebook.com/</a> e accedi con lo stesso Facebook. La prima volta clicca
+Inizia e completa la registrazione come sviluppatore (gratuita).</li>
+<li>Le mie app (<a href="https://developers.facebook.com/apps" target="_blank" rel="noopener">https://developers.facebook.com/apps</a>) → Crea app. Nome: il nome dello studio
+seguito da «promemoria» (es. Clinica Rossi – Promemoria); email: quella dello studio; caso d&#39;uso
+Connettiti con i clienti tramite WhatsApp (se non compare, Altro → Azienda e poi aggiungi il
+caso d&#39;uso WhatsApp); portfolio: quello dello studio → Crea app.</li>
+<li>Si apre la Dashboard dell&#39;app. Nel menu a sinistra clicca Casi d&#39;uso → Personalizza: è la
+pagina con la Panoramica e, a sinistra, i tre passaggi di Meta che seguiremo:<ul>
+<li>Passaggio 1. Prova – numero di prova di Meta, non ci serve;</li>
+<li>Passaggio 2. Configurazione di produzione – webhook, numero dello studio, pagamento, token;</li>
+<li>Passaggio 3. Verifica dell&#39;azienda.</li>
+</ul>
+</li>
+<li>Nel menu a sinistra della Dashboard apri Impostazioni app → Di base e copia nel gestore di
+password l&#39;ID app e il Segreto dell&#39;app (clicca Mostra). Il segreto va nel campo «App secret»
+delle credenziali in Enident: serve a riconoscere che i messaggi in arrivo vengono davvero da
+Meta.</li>
+</ol>
+<blockquote>
+<p>Il numero di prova e il token temporaneo del Passaggio 1 valgono 24 ore e servono solo agli
+esperimenti di Meta: non usarli qui. Attenzione anche a non creare i modelli nell&#39;account di
+prova: i modelli vanno nell&#39;account WhatsApp Business del numero dello studio.</p>
+</blockquote>
+<h4 id="3-numero-di-telefono-dello-studio">3. Numero di telefono dello studio</h4>
+<p>Il numero deve non essere mai stato registrato su WhatsApp e deve poter ricevere una chiamata: il
+fisso dello studio è la scelta più semplice e resta quello che i pazienti conoscono. Il numero già
+usato con l&#39;app WhatsApp Business sul telefono non si tocca.</p>
+<ol>
+<li>Casi d&#39;uso → Personalizza → Passaggio 2. Configurazione di produzione → Registra il tuo numero
+di telefono WhatsApp → Aggiungi nuovo numero.</li>
+<li>Compila il profilo WhatsApp Business: nome visualizzato (il nome dello studio, esattamente come
+nel portfolio: Meta lo controlla), categoria Salute, descrizione, indirizzo, email, sito se c&#39;è.</li>
+<li>Inserisci il numero con prefisso +39 e scegli la verifica tramite chiamata: una telefonata
+automatica detta un codice di 6 cifre; inseriscilo. Se il centralino ha un risponditore, fai
+arrivare la chiamata a un telefono con una persona.</li>
+<li>A verifica fatta, nel riquadro compaiono il nome dell&#39;account con l&#39;ID dell&#39;account WhatsApp
+Business e, sotto il numero, l&#39;ID del numero di telefono: copiali entrambi nei campi «WhatsApp
+Business Account ID» e «Phone Number ID» delle credenziali in Enident. Lascia attivo
+l&#39;interruttore Iscriviti ai webhook.</li>
+</ol>
+<blockquote>
+<p>Finché l&#39;azienda non è verificata (Passaggio 3) il numero è in modalità limitata: 250 pazienti
+diversi al giorno e nome visualizzato «in revisione». Per uno studio basta; la verifica toglie il
+limite.</p>
+</blockquote>
+<h4 id="4-token-permanente">4. Token permanente</h4>
+<p>Serve una «chiave» che non scade: Meta la genera direttamente dalla configurazione di produzione.</p>
+<ol>
+<li>Casi d&#39;uso → Personalizza → Passaggio 2 → Invia messaggio → Passaggio 1: genera un token →
+Genera token. Il testo spiega che è un token di accesso permanente per l&#39;account WhatsApp
+Business dello studio.</li>
+<li>Copia il token (inizia con EAA…) e conservalo nel gestore di password: Meta lo mostra una sola
+volta. Va nel campo «Token di accesso permanente» delle credenziali in Enident.</li>
+<li>Se il pulsante non funziona, sotto c&#39;è il link «these steps»: porta alla procedura manuale con un
+utente di sistema (Impostazioni del portfolio → Utenti → Utenti di sistema → Aggiungi, ruolo
+Amministratore → Assegna risorse: l&#39;app dello studio e l&#39;account WhatsApp, con controllo totale
+→ Genera token con l&#39;app, scadenza Mai, permessi whatsapp_business_messaging e
+whatsapp_business_management). Il risultato è lo stesso.
+Pagina degli utenti di sistema: <a href="https://business.facebook.com/settings/system-users" target="_blank" rel="noopener">https://business.facebook.com/settings/system-users</a></li>
+</ol>
+<blockquote>
+<p>Se il token finisse nelle mani sbagliate, rigeneralo dallo stesso punto e sostituiscilo in
+Enident.</p>
+</blockquote>
+<h4 id="5-credenziali-in-enident-e-modello-del-promemoria">5. Credenziali in Enident e modello del promemoria</h4>
+<p>Prima si salvano le credenziali in Enident, e con il salvataggio nasce il token di verifica per il
+webhook; poi si crea il modello del promemoria in Impostazioni → Template, che lo manda
+direttamente nell&#39;account giusto.</p>
+<ol>
+<li><p>Nelle credenziali di Impostazioni → WhatsApp, con il provider Meta WhatsApp Cloud API, compila
+Phone Number ID e WhatsApp Business Account ID (passo 3), Token di accesso permanente (passo 4)
+e App secret (passo 2), poi premi «Salva e verifica»: le credenziali si controllano con Meta e,
+se tutto risponde, compaiono l&#39;<strong>URL del webhook</strong> e il <strong>token di verifica</strong> da copiare. Infine
+spunta «Invia i WhatsApp con Meta» e salva.</p>
+</li>
+<li><p>Impostazioni → Template → WhatsApp → Nuovo modello: nome (minuscole, numeri e _, es.
+promemoria_appuntamento), lingua it, testo con i segnaposto cliccabili ({nome}, {studio},
+{data}, {ora}, {operatore}…) nell&#39;ordine e nel numero che preferisci, per esempio:</p>
+<pre><code>Gentile {nome}, le ricordiamo l&#39;appuntamento presso {studio} il giorno {data} alle ore {ora}. Risponda SI per confermare o NO se non può venire. Grazie.
+</code></pre>
+</li>
+<li><p>Crea e invia in approvazione: il modello parte verso WhatsApp nella categoria Utility, la più
+economica e la più facile da approvare. Con Aggiorna vedi lo stato: in revisione, approvato (di
+solito in pochi minuti, al massimo un giorno), rifiutato con il motivo.</p>
+</li>
+<li><p>Quando è approvato, Segna come preferito: è il modello che i promemoria useranno. Puoi crearne
+altri (per esempio uno per la conferma e uno per il richiamo) e scegliere quale usare in ogni
+regola.</p>
+</li>
+</ol>
+<blockquote>
+<p>Il testo non deve iniziare né finire con un segnaposto (WhatsApp lo rifiuta), e dopo
+l&#39;approvazione non si modifica: si crea un modello nuovo.</p>
+</blockquote>
+<h4 id="6-webhook-e-pubblicazione-dell39app">6. Webhook e pubblicazione dell&#39;app</h4>
+<p>Il webhook è l&#39;indirizzo a cui Meta manda le risposte dei pazienti e gli stati di consegna. Serve
+anche pubblicare l&#39;app: finché non è pubblicata, Meta invia solo webhook di prova e nessuna
+risposta reale arriva in Enident.</p>
+<ol>
+<li>Casi d&#39;uso → Personalizza → Passaggio 2 → Configura webhook. URL di callback = l&#39;URL del
+webhook copiato al passo 5 (in produzione <code>https://api.enident.it/api/v1/messaging/meta/webhook</code>);
+Verifica il token = il token di verifica copiato al passo 5; lascia spento il certificato client
+→ Verifica e salva. Meta contatta subito Enident: se fallisce, controlla di aver salvato prima le
+credenziali in Enident e di aver copiato il token per intero.</li>
+<li>Sotto, in Campi del webhook, attiva l&#39;iscrizione al campo messages (porta sia le risposte dei
+pazienti sia gli stati di consegna); gli altri campi possono restare spenti.</li>
+<li>Nel menu a sinistra della Dashboard apri Pubblicazione e porta l&#39;app in Pubblicata (Live). Per
+un&#39;app che usa solo WhatsApp sulle risorse del proprio portfolio non serve alcuna revisione di
+Meta; il pulsante Pubblica resta disattivato finché manca l&#39;URL dell&#39;informativa sulla privacy:
+clicca «Accedi alle impostazioni app» e in Impostazioni app → Di base compila l&#39;URL
+dell&#39;informativa (quella dello studio o, in mancanza, quella di Enident:
+<a href="https://enident.it/privacy" target="_blank" rel="noopener">https://enident.it/privacy</a>), la categoria (Salute) e salva; poi torna su Pubblicazione e
+clicca Pubblica.</li>
+<li>Verifica: in fondo a Impostazioni → WhatsApp, «Invia WhatsApp di prova» verso il cellulare di
+chi configura. Arriva il modello preferito con dati di prova. Rispondi SI dal cellulare: entro
+pochi secondi la risposta compare in Comunicazioni → Risposte dei pazienti.</li>
+</ol>
+<blockquote>
+<p>Se la prova fallisce, apri Comunicazioni: ogni invio mostra l&#39;errore completo di Meta, con il
+codice da cercare nella tabella «Problemi comuni» qui sotto.</p>
+</blockquote>
+<h4 id="7-pagamento-verifica-dell39azienda-e-prova-con-un-paziente">7. Pagamento, verifica dell&#39;azienda e prova con un paziente</h4>
+<p>Senza un metodo di pagamento Meta blocca i messaggi iniziati dallo studio, cioè i promemoria; le
+risposte dei pazienti sono gratuite (fino a 1000 conversazioni di servizio al mese per numero). La
+verifica dell&#39;azienda è facoltativa all&#39;inizio ma toglie i limiti del numero e mostra il nome dello
+studio nelle chat.</p>
+<p><strong>Pagamento</strong></p>
+<ol>
+<li>Casi d&#39;uso → Personalizza → Passaggio 2 → Aggiungi il pagamento per inviare messaggi avviati
+dall&#39;azienda → segui il link al Billing Hub (<a href="https://business.facebook.com/billing_hub" target="_blank" rel="noopener">https://business.facebook.com/billing_hub</a>) →
+aggiungi carta o conto e l&#39;intestazione di fatturazione con i dati fiscali dello studio. Al
+ritorno il riquadro mostra «Metodo di pagamento aggiunto».</li>
+<li>Costo indicativo per l&#39;Italia: pochi centesimi per promemoria (categoria Utility); la cifra
+esatta è nella fattura mensile di Meta.</li>
+</ol>
+<p><strong>Verifica dell&#39;azienda (2–10 giorni lavorativi)</strong></p>
+<ol>
+<li>Casi d&#39;uso → Personalizza → Passaggio 3. Verifica dell&#39;azienda → Avvia verifica dell&#39;azienda.</li>
+<li>Conferma ragione sociale, indirizzo e telefono dello studio: devono coincidere con il documento.
+Carica la visura camerale (o un documento dell&#39;Agenzia delle Entrate con ragione sociale, partita
+IVA e indirizzo).</li>
+<li>Conferma il contatto: telefono dello studio con una chiamata, oppure il dominio del sito se lo
+studio ne ha uno.</li>
+<li>L&#39;esito compare nello stesso Passaggio 3 («Approvata»). Se viene rifiutata, di solito un dato del
+profilo è diverso dal documento: correggi in Impostazioni del portfolio → Informazioni business e
+ricarica.</li>
+</ol>
+<p><strong>Prova con un paziente vero</strong></p>
+<ol>
+<li>Crea un paziente con il tuo cellulare e canale preferito WhatsApp, un appuntamento per domani, e
+attiva in Impostazioni → Promemoria una regola a 24 ore (oppure Invia ora dal dettaglio
+dell&#39;appuntamento, scegliendo canale WhatsApp e il modello).</li>
+<li>Il promemoria arriva dal numero fisso con il nome dello studio. Rispondi SI: l&#39;appuntamento
+diventa confermato; rispondi NO a un altro: viene segnato da richiamare. In Comunicazioni vedi
+invio, consegna, lettura e risposta.</li>
+</ol>
+<h4 id="problemi-comuni-whatsapp-con-meta">Problemi comuni (WhatsApp con Meta)</h4>
+<div class="tabella"><table>
+<thead>
+<tr>
+<th>Sintomo</th>
+<th>Causa probabile</th>
+<th>Cosa fare</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Il link business.facebook.com/settings mostra «Seleziona Business Manager» e nessun portfolio dello studio</td>
+<td>Il Facebook usato non è amministratore del portfolio</td>
+<td>Farsi invitare dal titolare da Impostazioni → Utenti → Persone, o creare il portfolio</td>
+</tr>
+<tr>
+<td>«Verifica e salva» del webhook fallisce</td>
+<td>Credenziali non ancora salvate in Enident, o token di verifica copiato male</td>
+<td>Salva prima le credenziali in Enident, ricopia il token, riprova</td>
+</tr>
+<tr>
+<td>Il salvataggio delle credenziali le rifiuta</td>
+<td>Token senza i permessi giusti, o utente di sistema senza l&#39;account WhatsApp tra le risorse</td>
+<td>Assegna l&#39;account WhatsApp all&#39;utente di sistema e rigenera il token con i due permessi whatsapp_business_*</td>
+</tr>
+<tr>
+<td>Invio di prova: «modello non trovato»</td>
+<td>Nome o lingua diversi da quelli approvati</td>
+<td>Copia il nome esatto da WhatsApp Manager e usa it come lingua</td>
+</tr>
+<tr>
+<td>Invio di prova: errore di pagamento o «account non attivo»</td>
+<td>Metodo di pagamento mancante</td>
+<td>Aggiungi carta o conto in WhatsApp Manager → Pagamenti</td>
+</tr>
+<tr>
+<td>Errore 131026 (destinatario non raggiungibile)</td>
+<td>Il paziente non ha WhatsApp o il numero è senza prefisso</td>
+<td>Controlla il numero in formato +39… nella scheda paziente</td>
+</tr>
+<tr>
+<td>Errore 131047 (fuori dalla finestra di 24 ore)</td>
+<td>Tentato un messaggio libero senza modello</td>
+<td>Normale: i promemoria usano il modello; se compare, il modello manca o non è approvato</td>
+</tr>
+<tr>
+<td>Nome visualizzato «in revisione» da giorni</td>
+<td>Nome diverso da quello del portfolio</td>
+<td>Allinea il nome del profilo WhatsApp alla ragione sociale, o completa la verifica dell&#39;azienda</td>
+</tr>
+<tr>
+<td>Le risposte dei pazienti non arrivano in Comunicazioni</td>
+<td>Campo messages non sottoscritto, o App secret sbagliato</td>
+<td>Controlla «Campi webhook» e il valore nel campo App secret della pagina</td>
+</tr>
+<tr>
+<td>Verifica dell&#39;azienda rifiutata</td>
+<td>Dati del profilo diversi dal documento</td>
+<td>Correggi ragione sociale e indirizzo in Informazioni business, ricarica un documento con gli stessi dati</td>
+</tr>
+</tbody></table>
+</div><h3 id="rimuovere-la-configurazione-whatsapp">Rimuovere la configurazione WhatsApp</h3>
+<p><strong>Rimuovi configurazione</strong>, in fondo alla pagina, cancella le credenziali WhatsApp dello studio
+(Twilio e Meta, compresi token e app secret) e spegne il canale; il Phone Number ID torna libero per
+un altro studio. I messaggi già inviati restano in Comunicazioni; quelli ancora in coda non
+partono.</p>
+<hr>
+<p><a href="05-promemoria-e-comunicazioni.html">← Promemoria e comunicazioni</a> · <a href="index.html">Indice</a> · <a href="07-prenotazione-online.html">Prenotazione online →</a></p>
+</main>
+<footer>
+  <span>© <span id="anno"></span> Francesco Paolo Enia</span>
+  <a href="./">Indice della guida</a>
+  <a href="/download/">Scarica l'app</a>
+  <a href="/termini">Termini di servizio</a>
+  <a href="/privacy">Informativa privacy</a>
+</footer>
+<script>document.getElementById('anno').textContent=new Date().getFullYear();</script>
+</body>
+</html>

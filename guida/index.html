@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guida di Enident Planner</title>
+<meta name="description" content="Guida di Enident Planner, l'agenda per studi dentistici: Guida di Enident Planner.">
+<link rel="icon" type="image/svg+xml" href="/icona.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/stile.css">
+<style>
+main{max-width:52rem}
+.brand{max-width:52rem;display:flex;gap:.6rem;align-items:baseline}
+.brand .sez{font-weight:500;color:var(--ink)}
+footer{max-width:52rem}
+main img{max-width:100%;height:auto;border:1px solid var(--line);border-radius:.5rem;box-shadow:0 1px 3px rgba(34,27,22,.08)}
+main p img{vertical-align:top;margin:0 .4rem .4rem 0}
+a.img{display:inline-block}
+main a{overflow-wrap:anywhere}
+code{background:#FFF4EC;border-radius:.25rem;padding:.05rem .3rem;font-size:.9em}
+pre{background:#FFF4EC;border-radius:.5rem;padding:.8rem 1rem;overflow-x:auto;white-space:pre-wrap}
+pre code{padding:0;background:none}
+blockquote{background:#FFF4EC;border-left:4px solid var(--brand);padding:.6rem 1rem;margin:1rem 0;border-radius:0 .5rem .5rem 0}
+blockquote p{margin:.3rem 0}
+.tabella{overflow-x:auto}
+h3{font-size:1.08rem;margin:1.6rem 0 .4rem}
+h4{font-size:1rem;margin:1.3rem 0 .3rem}
+hr{border:0;border-top:1px solid var(--line);margin:2.5rem 0 1rem}
+.versione{color:var(--ink-soft);font-size:.9rem}
+</style>
+</head>
+<body>
+<header><div class="brand"><a href="/">Enident Planner</a><a class="sez" href="./">Guida</a></div></header>
+<main>
+<h1 id="guida-di-enident-planner">Guida di Enident Planner</h1>
+<p>Enident Planner è l&#39;agenda per lo studio dentistico: appuntamenti, pazienti, promemoria via email,
+SMS e WhatsApp, prenotazione online e report. Questa guida è scritta per titolari e segreteria e
+spiega, passo per passo, come si usa.</p>
+<p>Si apre anche dall&#39;app: menu con il tuo nome (in alto a destra) → <strong>Guida</strong>.</p>
+<p><a class="img" href="img/menu-account.png"><img src="img/menu-account.png" alt="La voce Guida nel menu dell'account" loading="lazy"></a></p>
+<p><a class="img" href="img/agenda-giorno.png"><img src="img/agenda-giorno.png" alt="L'agenda di Enident Planner" loading="lazy"></a></p>
+<h2 id="capitoli">Capitoli</h2>
+<ol>
+<li><a href="01-primi-passi.html">Primi passi</a> — registrazione, prova gratuita, creazione dello studio, inviti e ruoli</li>
+<li><a href="02-agenda.html">Agenda</a> — viste, appuntamenti, stati, blocchi, chiusure, note del giorno, stampa, tastiera</li>
+<li><a href="03-pazienti.html">Pazienti</a> — anagrafica, ricerca, storico, famiglie, cancellazione e GDPR</li>
+<li><a href="04-in-sospeso.html">In sospeso</a> — lista d&#39;attesa e pazienti da richiamare</li>
+<li><a href="05-promemoria-e-comunicazioni.html">Promemoria e comunicazioni</a> — template, regole, invio a mano, Comunicazioni, risposte dei pazienti</li>
+<li><a href="06-canali.html">Canali</a> — email, SMS con Twilio, WhatsApp con Twilio o con Meta</li>
+<li><a href="07-prenotazione-online.html">Prenotazione online</a> — configurazione, pagina per i pazienti, richieste, cartello con il QR code</li>
+<li><a href="08-report.html">Report</a> — occupazione, no-show, conferme e il confronto con il periodo precedente</li>
+<li><a href="09-abbonamento-e-piani.html">Abbonamento e piani</a> — piani, pagamento, disdetta, sola lettura</li>
+<li><a href="10-impostazioni.html">Impostazioni</a> — studio, operatori, stanze, tipi, preferenze, sicurezza, Google Calendar</li>
+<li><a href="11-web-e-telefono.html">Versione web e telefono</a> — Enident dal browser e dallo smartphone</li>
+<li><a href="12-domande-frequenti.html">Domande frequenti e problemi comuni</a></li>
+</ol>
+<h2 id="le-parole-della-guida">Le parole della guida</h2>
+<div class="tabella"><table>
+<thead>
+<tr>
+<th>Parola</th>
+<th>Significato</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Studio</td>
+<td>Lo studio dentistico in Enident, con il suo archivio e la sua agenda</td>
+</tr>
+<tr>
+<td>Operatore</td>
+<td>Chi riceve i pazienti (dentista, igienista…): una colonna dell&#39;agenda</td>
+</tr>
+<tr>
+<td>Stanza</td>
+<td>Una poltrona o sala</td>
+</tr>
+<tr>
+<td>Membro</td>
+<td>Una persona con un account che lavora nello studio, con un ruolo</td>
+</tr>
+<tr>
+<td>Slot / spazio libero</td>
+<td>Un orario libero nella griglia dell&#39;agenda</td>
+</tr>
+<tr>
+<td>Blocco</td>
+<td>Un intervallo non prenotabile (riunione, ferie, chiusura)</td>
+</tr>
+<tr>
+<td>Template</td>
+<td>Il testo di un promemoria</td>
+</tr>
+<tr>
+<td>Postazione</td>
+<td>Il computer (o il browser) su cui usi Enident</td>
+</tr>
+</tbody></table>
+</div><p>Le immagini della guida mostrano uno studio di esempio con dati inventati.</p>
+</main>
+<footer>
+  <span>© <span id="anno"></span> Francesco Paolo Enia</span>
+  <a href="./">Indice della guida</a>
+  <a href="/download/">Scarica l'app</a>
+  <a href="/termini">Termini di servizio</a>
+  <a href="/privacy">Informativa privacy</a>
+</footer>
+<script>document.getElementById('anno').textContent=new Date().getFullYear();</script>
+</body>
+</html>
