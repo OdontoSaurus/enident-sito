@@ -112,6 +112,71 @@ compare anche la riga «Attesa in studio: in media … su … visite».</p>
 </ol>
 <p>Nello storico, l&#39;interruttore <strong>Anche i pazienti collegati</strong> mostra insieme gli appuntamenti di
 tutta la famiglia. I tipi di relazione si gestiscono in <strong>Impostazioni → Relazioni</strong>.</p>
+<h2 id="importare-i-pazienti-da-un-altro-gestionale">Importare i pazienti da un altro gestionale</h2>
+<p>Se lo studio arriva da un altro programma, il proprietario può caricare tutta l&#39;anagrafica in una
+volta, da un file <code>.jsonl</code> (un paziente per riga, al massimo 20 MB) preparato da chi ha esportato
+i dati dal vecchio gestionale.</p>
+<h3 id="il-formato-del-file">Il formato del file</h3>
+<p>In <strong>Impostazioni → Importa pazienti</strong>, il riquadro <strong>Formato del file</strong> elenca i campi che il
+file può contenere: per ognuno dice se è obbligatorio (solo nome e cognome lo sono) e cosa
+contiene, e mostra un esempio. Da lì puoi scaricare:</p>
+<ul>
+<li><strong>lo schema (JSON Schema)</strong>, la descrizione tecnica del formato, da dare a chi prepara il file:
+con lo schema può controllare da solo che il file sia corretto prima di mandartelo;</li>
+<li><strong>un file di esempio</strong>, con due pazienti, da usare come modello.</li>
+</ul>
+<p>Ogni riga del file è un paziente. Un campo che non è nell&#39;elenco rende la riga non valida.</p>
+<h3 id="importare">Importare</h3>
+<ol>
+<li>Apri <strong>Impostazioni → Importa pazienti</strong> (la scheda c&#39;è solo per il proprietario, nell&#39;app
+desktop o nella versione web dal computer).</li>
+<li>Scegli il file e premi <strong>Verifica</strong>. Non si scrive ancora nulla: compare il riepilogo, con
+il numero di righe per ogni categoria (un clic sulla categoria la apre):<ul>
+<li><strong>Nuovi pazienti</strong>: verranno creati;</li>
+<li><strong>Schede completate</strong>: pazienti già nello studio a cui si aggiungono dati, con i campi
+aggiunti;</li>
+<li><strong>Già complete</strong>: pazienti già nello studio che non cambiano;</li>
+<li><strong>Campi in contrasto</strong>: valori del file diversi da quelli della scheda, che restano come sono
+(per esempio una data di nascita diversa): controllali a mano;</li>
+<li><strong>Da verificare</strong>: righe per cui non è chiaro a chi appartengono;</li>
+<li><strong>Errori</strong>: righe non valide, con il numero di riga e il motivo.</li>
+</ul>
+</li>
+<li>Se ci sono errori, fai correggere il file e ricomincia: finché ce n&#39;è anche uno solo non si
+importa nulla.</li>
+<li>Per ogni riga <strong>da verificare</strong> scegli <strong>Collega a …</strong> (uno dei pazienti proposti) oppure
+<strong>Crea nuovo paziente</strong>. Le righe lasciate su «Decidi dopo» vengono saltate.</li>
+<li>Premi <strong>Importa</strong> e conferma. Al termine compare il riepilogo finale.</li>
+</ol>
+<p>Come si riconosce un paziente già presente (senza badare a maiuscole, accenti e apostrofi): dal
+codice fiscale; altrimenti da cognome, nome e data di nascita; altrimenti da cognome, nome e un
+telefono in comune; altrimenti dal solo cognome e nome, se nello studio c&#39;è un unico paziente con
+quel nome e i suoi dati non sono in contrasto con il file. Con più omonimi, o con dati diversi,
+la riga va tra quelle da verificare.</p>
+<p>Le schede esistenti non vengono mai sovrascritte: si riempiono solo i campi vuoti, i telefoni del
+file si aggiungono fino a 3 (il numero per i promemoria resta lo stesso) e le note del file si
+aggiungono in fondo a quelle esistenti. Il canale preferito per i promemoria non cambia.</p>
+<p>Si può rilanciare l&#39;importazione con lo stesso file (per esempio per riprendere le righe saltate):
+i pazienti già importati vengono riconosciuti e non si creano doppioni. L&#39;importazione non invia
+email né messaggi ai pazienti; nel registro delle attività resta una sola voce con i conteggi.</p>
+<h3 id="annullare-un39importazione">Annullare un&#39;importazione</h3>
+<p>In fondo alla pagina, <strong>Importazioni eseguite</strong> elenca le importazioni, con chi le ha fatte e
+quanti pazienti hanno creato o completato.</p>
+<ol>
+<li>Premi <strong>Annulla…</strong> sull&#39;importazione da annullare.</li>
+<li>Leggi cosa succederà: quanti pazienti verranno eliminati, quante schede torneranno come prima
+e cosa invece resta.</li>
+<li>Premi <strong>Annulla l&#39;importazione</strong>.</li>
+</ol>
+<p>I pazienti creati dall&#39;importazione vengono eliminati e nelle schede completate tornano i valori
+di prima. Ciò che è stato fatto dopo l&#39;importazione non si perde: un paziente nuovo che nel
+frattempo è stato modificato o che ha già appuntamenti, lista d&#39;attesa, richiami o messaggi resta;
+un campo di una scheda completata che qualcuno ha cambiato dopo resta come è. Il riepilogo li
+elenca, così puoi sistemarli a mano. Un&#39;importazione si annulla una volta sola; dopo, puoi
+importare di nuovo lo stesso file.</p>
+<h3 id="i-dati-del-file">I dati del file</h3>
+<p>Il file contiene dati sanitari: conservalo in un posto sicuro e cancellalo quando non serve più.
+Enident Planner non lo conserva: lo legge solo per l&#39;importazione.</p>
 <h2 id="eliminare-un-paziente">Eliminare un paziente</h2>
 <p><strong>Elimina</strong>, in alto nella scheda (proprietario e amministratori), toglie il paziente dall&#39;archivio
 e dalle ricerche. I suoi appuntamenti restano in agenda. È una cancellazione «logica»: i dati
@@ -143,7 +208,7 @@ stanze, messaggi, relazioni e richieste online in formato CSV (si apre con Excel
 48 ore.</p>
 <hr>
 <p><a href="02-agenda.html">← Agenda</a> · <a href="index.html">Indice</a> · <a href="04-in-sospeso.html">In sospeso →</a></p>
-<p class="versione">Guida aggiornata alla versione 1.0.1 di Enident Planner.</p>
+<p class="versione">Guida aggiornata alla versione 1.1.0 di Enident Planner.</p>
 </main>
 <footer>
   <span>© <span id="anno"></span> Francesco Paolo Enia</span>
