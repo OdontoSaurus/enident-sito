@@ -131,12 +131,18 @@ Per sbloccarla serve la password; il lavoro in corso non si perde.</li>
 Sicurezza</strong> (per esempio «Chiedi sempre la password all&#39;avvio dell&#39;app» e «Blocco per inattività
 al massimo 15 minuti»). Ogni postazione può scegliere valori più restrittivi, non meno: le scelte
 meno restrittive restano disattivate con il nome dello studio che le impone.</p>
+<p>In ogni caso, dopo <strong>30 giorni</strong> dall&#39;ultimo accesso con la password (o meno, se uno degli studi
+di cui fai parte chiede di rifare l&#39;accesso più spesso) la postazione chiede di nuovo la password,
+anche se l&#39;app è rimasta aperta. Il giorno prima compare l&#39;avviso «Entro domani dovrai rifare
+l&#39;accesso su questa postazione». Ogni computer conta per conto suo: accedere su uno non rinnova
+gli altri.</p>
 <h2 id="impostazioni-account">Impostazioni account</h2>
 <p><a class="img" href="img/account.png"><img src="img/account.png" alt="Impostazioni account → Account" loading="lazy"></a></p>
 <p>Dal menu con il tuo nome → <strong>Impostazioni account</strong>:</p>
 <ul>
 <li><strong>Account:</strong> nome ed email; <strong>Cambia password</strong> (serve quella attuale; le altre postazioni
-vengono scollegate); <strong>Esci da tutte le postazioni</strong>; <strong>Elimina account</strong>.</li>
+vengono scollegate); <strong>Autenticazione a due fattori</strong> (vedi sotto); <strong>Esci da tutte le
+postazioni</strong>; <strong>Elimina account</strong>.</li>
 <li><strong>Abbonamento:</strong> vedi <a href="09-abbonamento-e-piani.html">Abbonamento e piani</a>.</li>
 <li><strong>Applicazione:</strong> le preferenze di questo computer.</li>
 </ul>
@@ -145,6 +151,45 @@ link per sceglierne una nuova (valido un&#39;ora).</p>
 <p><strong>Eliminare l&#39;account</strong> cancella nome ed email (diritto all&#39;oblio). Prima bisogna passare la
 proprietà degli studi di cui si è proprietari, o eliminarli, e disdire l&#39;abbonamento. Gli
 appuntamenti e i dati degli studi restano agli studi.</p>
+<h3 id="autenticazione-a-due-fattori">Autenticazione a due fattori</h3>
+<p>Con l&#39;autenticazione a due fattori, per entrare non basta la password: serve anche un codice di 6
+cifre che cambia ogni 30 secondi, generato da un&#39;app sul tuo telefono (Google Authenticator,
+Microsoft Authenticator o un&#39;altra app di autenticazione). Chi scopre la tua password, senza il
+tuo telefono, non entra. È facoltativa e vale per il tuo account, in tutti gli studi.</p>
+<p><a class="img" href="img/due-fattori.png"><img src="img/due-fattori.png" alt="Autenticazione a due fattori in Impostazioni account" loading="lazy"></a></p>
+<blockquote>
+<p><strong>Un account per persona.</strong> Il codice arriva sul telefono di chi ha attivato l&#39;autenticazione a
+due fattori. Se in studio più persone usano lo stesso account, solo chi ha quel telefono potrà
+entrare: ognuno deve avere il proprio account (in <strong>Impostazioni → Membri</strong> inviti ciascuno con
+la sua email).</p>
+</blockquote>
+<p>Per attivarla:</p>
+<ol>
+<li>Installa sul telefono un&#39;app di autenticazione, se non ne hai già una.</li>
+<li>Vai in <strong>Impostazioni account → Account</strong> e, in <strong>Autenticazione a due fattori</strong>, premi
+<strong>Attiva</strong>.</li>
+<li>Nell&#39;app scegli di aggiungere un account e inquadra il codice QR. Se non riesci, scrivi a mano
+la chiave mostrata sotto (con <strong>Copia</strong> la copi). Premi <strong>Avanti</strong>.</li>
+<li>Scrivi il codice di 6 cifre che l&#39;app mostra per Enident e premi <strong>Attiva</strong>.</li>
+<li>Compaiono <strong>10 codici di recupero</strong>: copiali con <strong>Copia</strong> e conservali in un posto sicuro,
+non sul telefono (per esempio stampati, o in un gestore di password). Servono per entrare se
+perdi il telefono, ognuno una volta sola, e non li vedrai più. Poi premi <strong>Ho salvato i
+codici</strong>.</li>
+</ol>
+<p><a class="img" href="img/due-fattori-attiva.png"><img src="img/due-fattori-attiva.png" alt="Il primo passo dell'attivazione: il codice QR da inquadrare" loading="lazy"></a></p>
+<p>Da quel momento, all&#39;accesso, dopo la password l&#39;app chiede il <strong>codice di verifica</strong>: apri l&#39;app
+sul telefono e scrivi il codice di Enident. Se non hai il telefono, premi <strong>Usa un codice di
+recupero</strong> e scrivi uno dei codici salvati. Il rinnovo della sessione e lo sblocco della
+postazione dopo l&#39;inattività chiedono solo la password.</p>
+<ul>
+<li><strong>Rigenera i codici di recupero:</strong> se li hai usati quasi tutti o temi che qualcuno li abbia
+visti. Servono la password e un codice dell&#39;app (o di recupero); quelli di prima non valgono più.</li>
+<li><strong>Disattiva:</strong> servono la password e un codice dell&#39;app (o di recupero). Da lì in poi per
+entrare basta la password.</li>
+</ul>
+<p><strong>Hai perso il telefono e i codici di recupero?</strong> Scrivi all&#39;assistenza di Enident dall&#39;indirizzo
+email del tuo account: dopo le verifiche toglie l&#39;autenticazione a due fattori, e potrai entrare
+con la sola password e attivarla di nuovo con il telefono nuovo.</p>
 <h2 id="google-calendar">Google Calendar</h2>
 <p>Ogni operatore collegato al proprio account può copiare <strong>i suoi appuntamenti</strong> nel suo Google
 Calendar, per vederli sul telefono accanto agli impegni personali.</p>
@@ -169,7 +214,7 @@ studio sui dati dei pazienti.</p>
 elimina i calendari «Enident – …» dal tuo Google Calendar.</p>
 <hr>
 <p><a href="09-abbonamento-e-piani.html">← Abbonamento e piani</a> · <a href="index.html">Indice</a> · <a href="11-web-e-telefono.html">Versione web e telefono →</a></p>
-<p class="versione">Guida aggiornata alla versione 1.1.1 di Enident Planner.</p>
+<p class="versione">Guida aggiornata alla versione 1.2.0 di Enident Planner.</p>
 </main>
 <footer>
   <span>© <span id="anno"></span> Francesco Paolo Enia</span>
