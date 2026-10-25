@@ -1,4 +1,4 @@
-<!-- Icona di Enident Planner: una "C" bianca che abbraccia un calendario, sul fondo arancione
+<!-- Icona di Enident: una "C" bianca che abbraccia un calendario, sul fondo arancione
      (#FF7A1A, come il marchio). È l'origine delle icone del bundle, che si rigenerano con
      `npm run tauri icon src-tauri/icons/sorgente.svg` (da desktop/); le cartelle android e ios
      create dal comando si cancellano. Solo forme geometriche, senza font. -->

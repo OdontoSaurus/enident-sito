@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Enident Planner – Scarica l'agenda per il tuo studio dentistico</title>
-<meta name="description" content="Enident Planner è l'agenda desktop per studi dentistici: appuntamenti per operatore e stanza, promemoria ai pazienti via email, SMS e WhatsApp, aggiornamenti automatici.">
+<title>Enident – Scarica l'agenda per il tuo studio dentistico</title>
+<meta name="description" content="Enident è l'agenda desktop per studi dentistici: appuntamenti per operatore e stanza, promemoria ai pazienti via email, SMS e WhatsApp, aggiornamenti automatici.">
 <link rel="icon" type="image/svg+xml" href="/icona.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -117,20 +117,20 @@
   </g>
   </g>
 </svg>
-    Enident Planner
+    Enident
   </div>
 </header>
 
 <main>
-  <h1>Enident Planner</h1>
+  <h1>Enident</h1>
   <p class="tagline">L'agenda che tiene in ordine lo studio dentistico.</p>
   <p class="lead">Appuntamenti per operatore e per stanza, lista d'attesa, chiusure e ferie, promemoria ai pazienti via email, SMS e WhatsApp. Si aggiorna da sola.</p>
 
-  <a class="download" id="download" href="https://github.com/OdontoSaurus/enident-planner-releases/releases/latest">
+  <a class="download" id="download" href="https://github.com/OdontoSaurus/enident-releases/releases/latest">
     Scarica per Windows
     <small id="versione">Ultima versione</small>
   </a>
-  <p class="alt">Serve Windows 10 o 11 a 64 bit. <a id="msi" href="https://github.com/OdontoSaurus/enident-planner-releases/releases/latest">Preferisci il pacchetto .msi</a> per installazioni gestite dall'amministratore di rete.</p>
+  <p class="alt">Serve Windows 10 o 11 a 64 bit.</p>
 
   <section>
     <h2>Dopo il download</h2>
@@ -163,14 +163,14 @@
 
 <script>
   document.getElementById('anno').textContent = new Date().getFullYear();
-  fetch('https://api.github.com/repos/OdontoSaurus/enident-planner-releases/releases/latest')
+  fetch('https://api.github.com/repos/OdontoSaurus/enident-releases/releases/latest')
     .then(r => r.ok ? r.json() : null)
     .then(rel => {
       if (!rel || !rel.assets) return;
-      var exe = rel.assets.find(a => /setup\.exe$/i.test(a.name));
-      var msi = rel.assets.find(a => /\.msi$/i.test(a.name));
+      // l'installer della release più recente (Enident_<versione>_x64-setup.exe), mai la firma .sig;
+      // se non c'è, il link resta la pagina della release
+      var exe = rel.assets.find(a => /-setup\.exe$/i.test(a.name));
       if (exe) document.getElementById('download').href = exe.browser_download_url;
-      if (msi) document.getElementById('msi').href = msi.browser_download_url;
       if (rel.tag_name) document.getElementById('versione').textContent = 'Versione ' + rel.tag_name.replace(/^v/, '');
     })
     .catch(function () {});
