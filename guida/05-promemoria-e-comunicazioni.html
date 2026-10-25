@@ -69,7 +69,15 @@ lo inserisce dove si trova il cursore.</li>
 </thead>
 <tbody><tr>
 <td><code>{nome}</code>, <code>{cognome}</code></td>
-<td>Nome e cognome del paziente</td>
+<td>Nome e cognome del paziente (come nell&#39;anagrafica)</td>
+</tr>
+<tr>
+<td><code>{nome_paziente}</code></td>
+<td>Il <strong>nome per i messaggi</strong> del paziente (es. «Mirko» per «Gioacchino Mirko»), o il nome se è vuoto</td>
+</tr>
+<tr>
+<td><code>{nome_destinatario}</code></td>
+<td>Chi riceve il messaggio a quel numero: il <strong>nome del destinatario</strong> del numero (es. la madre «Maria»), o il nome per i messaggi del paziente</td>
 </tr>
 <tr>
 <td><code>{data_nascita}</code></td>
@@ -104,7 +112,11 @@ lo inserisce dove si trova il cursore.</li>
 <td>Recapiti dello studio (da Impostazioni → Studio)</td>
 </tr>
 </tbody></table>
-</div><p>Se un segnaposto dello studio resterebbe vuoto (per esempio manca il telefono dello studio),
+</div><p>Il <strong>nome per i messaggi</strong> e il <strong>nome del destinatario</strong> di ogni numero si scrivono nella scheda
+del paziente. Per esempio, con il numero della madre: «Gentile {nome_destinatario}, le ricordiamo
+l&#39;appuntamento di {nome_paziente}…» diventa «Gentile Maria, le ricordiamo l&#39;appuntamento di Mirko…».
+Nelle email <code>{nome_destinatario}</code> è sempre il nome del paziente.</p>
+<p>Se un segnaposto dello studio resterebbe vuoto (per esempio manca il telefono dello studio),
 Enident lo segnala con il collegamento a Impostazioni → Studio.</p>
 <p><a class="img" href="img/impostazioni-template-sms.png"><img src="img/impostazioni-template-sms.png" alt="Un template SMS con il conteggio dei caratteri" loading="lazy"></a></p>
 <p><strong>SMS:</strong> sotto il testo vedi i caratteri e quanti SMS servono (ogni SMS costa). Un SMS contiene
@@ -124,6 +136,9 @@ deve iniziare né finire con un segnaposto.</li>
 premi <strong>Aggiorna</strong> per vedere lo stato (In revisione, Approvato, Rifiutato con il motivo).</li>
 <li>Quando è approvato, <strong>Segna come preferito</strong>.</li>
 </ol>
+<p>Anche nei modelli WhatsApp si possono usare <code>{nome_paziente}</code> e <code>{nome_destinatario}</code>. I modelli già
+approvati restano come sono e continuano a funzionare: per usarli serve un modello nuovo, che va di
+nuovo in approvazione.</p>
 <p>Un modello approvato non si modifica: per cambiare il testo se ne crea uno nuovo. Con Twilio puoi
 anche registrare un modello già creato su Twilio, con il suo <strong>Content SID</strong>.</p>
 <h2 id="le-regole-dell39invio-automatico">Le regole dell&#39;invio automatico</h2>
@@ -162,7 +177,7 @@ promemoria non parte;</li>
 <h3 id="a-un-paziente">A un paziente</h3>
 <p><a class="img" href="img/invia-promemoria.png"><img src="img/invia-promemoria.png" alt="Invia il promemoria" loading="lazy"></a></p>
 <ol>
-<li>Clic destro sull&#39;appuntamento → <strong>Invia promemoria…</strong> (oppure, nel dettaglio, <strong>Invia ora</strong> nel
+<li>Clic destro sull&#39;appuntamento → <strong>Invia promemoria</strong> (oppure, nel dettaglio, <strong>Invia ora</strong> nel
 riquadro Promemoria).</li>
 <li>Scegli il <strong>Canale</strong>: quelli non disponibili sono disattivati con il motivo (per esempio manca
 l&#39;email); il preferito del paziente è segnato.</li>
@@ -247,13 +262,13 @@ altre restano da leggere. Nella conversazione la reazione compare come emoji, co
 <p>Per ogni risposta:</p>
 <ol>
 <li>leggi il testo, il paziente e l&#39;appuntamento collegato;</li>
-<li>se serve, premi <strong>Rispondi…</strong>: si apre la conversazione con il paziente e puoi scrivergli un SMS
+<li>se serve, premi <strong>Rispondi</strong>: si apre la conversazione con il paziente e puoi scrivergli un SMS
 o un WhatsApp (su WhatsApp solo entro 24 ore dal suo ultimo messaggio: la finestra lo indica);</li>
 <li>premi <strong>Segna come letta</strong> (o <strong>Segna tutte come lette</strong>).</li>
 </ol>
 <hr>
 <p><a href="04-in-sospeso.html">← In sospeso</a> · <a href="index.html">Indice</a> · <a href="06-canali.html">Canali →</a></p>
-<p class="versione">Guida aggiornata alla versione 1.2.1 di Enident Planner.</p>
+<p class="versione">Guida aggiornata alla versione 2.0.0 di Enident Planner.</p>
 </main>
 <footer>
   <span>© <span id="anno"></span> Francesco Paolo Enia</span>
