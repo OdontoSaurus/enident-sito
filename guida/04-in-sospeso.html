@@ -73,8 +73,13 @@ voce esce dalla lista come «prenotata».</p>
 <p>Annullando un appuntamento, se in lista ci sono pazienti compatibili (la durata entra nello spazio
 e l&#39;operatore va bene), Enident apre la finestra <strong>Slot liberato: chi richiamare?</strong> con fino a
 cinque candidati. <strong>Prenota qui</strong> fissa il candidato nello spazio appena liberato.</p>
+<h3 id="modificare-una-voce">Modificare una voce</h3>
+<p>Un clic sulla voce (senza trascinarla) la apre: cambi tipo, durata, operatore preferito, priorità,
+preferenze e note, oppure spunti <strong>Già contattato</strong>, poi <strong>Salva</strong>. Una voce già prenotata o rimossa
+si apre in sola lettura: si cambiano solo le note.</p>
 <h3 id="togliere-dalla-lista">Togliere dalla lista</h3>
-<p><strong>Rimuovi</strong> sulla voce, poi conferma. La voce resta nello storico come rimossa.</p>
+<p><strong>Rimuovi</strong> sulla voce (o <strong>Togli dalla lista d&#39;attesa</strong> nella finestra della voce), poi conferma. La
+voce resta nello storico come rimossa e non torna in lista: se serve, si aggiunge di nuovo.</p>
 <h2 id="da-richiamare">Da richiamare</h2>
 <p><a class="img" href="img/da-richiamare.png"><img src="img/da-richiamare.png" alt="La scheda Da richiamare" loading="lazy"></a></p>
 <p>Qui finiscono i pazienti da contattare. Molti arrivano da soli:</p>
@@ -130,15 +135,18 @@ ordine, con data, ora e chi le ha scritte, anche dopo che il richiamo è chiuso.
 <li>Se va richiamato più avanti, cambia <strong>Da richiamare il</strong> (o premi <strong>Domani</strong> o <strong>Tra una
 settimana</strong>) e <strong>Salva</strong>: il richiamo sparisce da quelli di oggi e torna quel giorno.
 <strong>Subito</strong> toglie la data.</li>
-<li>Quando hai finito, annota l&#39;<strong>Esito</strong> e scegli:<ul>
+<li><strong>Salva</strong> salva le modifiche e lascia il richiamo aperto, nella lista.</li>
+<li>Quando hai finito:<ul>
 <li><strong>Crea appuntamento:</strong> si apre il nuovo appuntamento già compilato; salvato, il richiamo si
 chiude da solo;</li>
 <li><strong>Metti in lista d&#39;attesa:</strong> il paziente passa in lista e il richiamo si chiude;</li>
-<li><strong>Fatto:</strong> chiude il richiamo;</li>
-<li><strong>Non serve più:</strong> lo chiude senza seguito.</li>
+<li><strong>Chiudi richiamo</strong> (in fondo, staccato dal <strong>Salva</strong>): scegli <strong>Fatto</strong> (il paziente è stato
+richiamato) o <strong>Non serve più</strong>, scrivi l&#39;esito se vuoi e conferma. Il richiamo esce dalla
+lista; per qualche secondo in basso c&#39;è <strong>Annulla</strong>, che lo riapre.</li>
 </ul>
 </li>
-<li>Un richiamo chiuso si può <strong>Riaprire</strong>.</li>
+<li>Un richiamo chiuso si ritrova scegliendo «Fatto» o «Annullato» nel filtro <strong>Stato</strong>, e si può
+<strong>Riaprire</strong>.</li>
 </ol>
 <p>Fissando un nuovo appuntamento al paziente, i richiami per «No», non presentato, annullato e
 richiesta scaduta si chiudono da soli. L&#39;operatore può chiudere solo i richiami assegnati a lui.</p>
@@ -151,7 +159,7 @@ richiesta scaduta si chiudono da soli. L&#39;operatore può chiudere solo i rich
 <strong>Azzera filtri</strong> li toglie.</p>
 <hr>
 <p><a href="03-pazienti.html">← Pazienti</a> · <a href="index.html">Indice</a> · <a href="05-promemoria-e-comunicazioni.html">Promemoria e comunicazioni →</a></p>
-<p class="versione">Guida aggiornata alla versione 2.0.1 di Enident.</p>
+<p class="versione">Guida aggiornata alla versione 2.0.2 di Enident.</p>
 </main>
 <footer>
   <span>© <span id="anno"></span> Francesco Paolo Enia</span>
