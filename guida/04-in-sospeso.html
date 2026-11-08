@@ -36,12 +36,13 @@ hr{border:0;border-top:1px solid var(--line);margin:2.5rem 0 1rem}
 <main>
 <h1 id="4-in-sospeso-lista-d39attesa-e-da-richiamare">4. In sospeso: lista d&#39;attesa e da richiamare</h1>
 <p>La barra <strong>In sospeso</strong>, a destra dell&#39;agenda, raccoglie i pazienti a cui va trovato un posto. Ha
-due schede:</p>
+queste schede:</p>
 <ul>
 <li><strong>Lista d&#39;attesa:</strong> pazienti che aspettano un appuntamento (o vogliono anticiparne uno);</li>
-<li><strong>Da richiamare:</strong> pazienti da contattare per fissare o spostare un appuntamento.</li>
+<li><strong>Da richiamare:</strong> pazienti da contattare per fissare o spostare un appuntamento;</li>
+<li><strong>Da spostare:</strong> appuntamenti già fissati che vanno spostati in un altro orario.</li>
 </ul>
-<p>Se la barra è chiusa, il pulsante <strong>In sospeso (n)</strong> la riapre; il numero somma le due schede.</p>
+<p>Se la barra è chiusa, il pulsante <strong>In sospeso (n)</strong> la riapre; il numero somma le schede.</p>
 <h2 id="lista-d39attesa">Lista d&#39;attesa</h2>
 <p><a class="img" href="img/lista-attesa.png"><img src="img/lista-attesa.png" alt="La lista d'attesa" loading="lazy"></a></p>
 <h3 id="mettere-un-paziente-in-lista">Mettere un paziente in lista</h3>
@@ -185,9 +186,23 @@ note del richiamo, insieme ai tentativi di contatto già fatti.</p>
 (aperti, fatti, annullati, tutti), motivo, assegnato a (anche «Non assegnati») e ordine
 (priorità, più vecchi o più recenti prima). I filtri restano memorizzati su quel computer;
 <strong>Azzera filtri</strong> li toglie.</p>
+<h2 id="da-spostare">Da spostare</h2>
+<p>Qui ci sono tutti gli appuntamenti dello studio segnati <strong>da spostare</strong> (vedi
+<a href="02-agenda.html#da-spostare">Agenda</a>), dal più vicino: paziente, giorno e ora, operatore, motivo,
+chi l&#39;ha segnato e quando. La scheda si aggiorna da sola anche quando un&#39;altra postazione segna o
+sposta un appuntamento.</p>
+<ol>
+<li>Premi <strong>Sposta</strong>: l&#39;appuntamento va negli appunti come con <strong>Taglia</strong> e l&#39;agenda va al suo
+giorno.</li>
+<li>Vai al nuovo giorno e orario e incolla (clic destro sullo spazio libero → <strong>Incolla qui…</strong>,
+oppure <strong>Ctrl+V</strong>).</li>
+</ol>
+<p>Spostato l&#39;appuntamento, il segno sparisce da solo. Puoi anche trascinarlo o cambiare data e ora
+nel dettaglio. <strong>Non serve più</strong> toglie il segno senza spostarlo; un clic sul nome apre il
+dettaglio. Sul telefono la scheda si vede in sola lettura.</p>
 <hr>
 <p><a href="03-pazienti.html">← Pazienti</a> · <a href="index.html">Indice</a> · <a href="05-promemoria-e-comunicazioni.html">Promemoria e comunicazioni →</a></p>
-<p class="versione">Guida aggiornata alla versione 2.0.12 di Enident.</p>
+<p class="versione">Guida aggiornata alla versione 2.0.13 di Enident.</p>
 </main>
 <footer>
   <span>© <span id="anno"></span> Francesco Paolo Enia</span>
