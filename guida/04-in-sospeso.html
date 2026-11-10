@@ -147,6 +147,9 @@ proprietario e gli amministratori preparano dei modelli in <strong>Impostazioni 
 <li>Scegli l&#39;<strong>Intervallo</strong>: un numero e l&#39;unità (giorni, settimane o mesi). I mesi sono di
 calendario: un richiamo creato il 31 agosto con 6 mesi cade il 28 febbraio.</li>
 <li>Se vuoi, scrivi le <strong>Note</strong>, che finiranno nelle note del richiamo.</li>
+<li>Se vuoi, scegli il <strong>Tipo di appuntamento proposto</strong> e la <strong>Durata (minuti)</strong>: il richiamo creato
+dal modello li ricorda, e con <strong>Crea appuntamento</strong> sono già proposti (si possono cambiare). Un
+tipo disattivato dopo resta scritto «(non più disponibile)» e non si propone più.</li>
 <li><strong>Salva</strong>.</li>
 </ol>
 <p>Con le frecce ▲ ▼ cambi l&#39;ordine in cui compaiono nel menu <strong>Modello</strong>; <strong>Disattiva</strong> li toglie
@@ -155,8 +158,11 @@ dal menu senza eliminarli. Tutti quelli che creano richiami possono usarli.</p>
 <p>Apri la voce con un clic:</p>
 <ol>
 <li>Telefona al paziente. Ogni tentativo si può annotare in <strong>Note</strong>: scrivi la <strong>Nuova nota</strong>
-(«Chiamato, non risponde», «Richiamare domani») e premi <strong>Aggiungi nota</strong>. Le note restano in
-ordine, con data, ora e chi le ha scritte, anche dopo che il richiamo è chiuso.</li>
+(«Chiamato, non risponde», «Richiamare domani») e premi <strong>Aggiungi nota</strong>. La <strong>Data della nota</strong>
+è oggi, ma puoi metterne una passata (per esempio una telefonata di ieri). Le note restano in
+ordine di data, con chi le ha scritte, anche dopo che il richiamo è chiuso. Con <strong>Cambia data</strong>
+correggi il giorno di una nota: le tue sempre, tutte se sei del proprietario, un amministratore
+o la segreteria.</li>
 <li>Se va richiamato più avanti, cambia <strong>Da richiamare il</strong> (o premi <strong>Domani</strong> o <strong>Tra una
 settimana</strong>) e <strong>Salva</strong>: il richiamo sparisce da quelli di oggi e torna quel giorno.
 <strong>Subito</strong> toglie la data.</li>
@@ -166,25 +172,45 @@ settimana</strong>) e <strong>Salva</strong>: il richiamo sparisce da quelli di 
 chiude da solo;</li>
 <li><strong>Metti in lista d&#39;attesa:</strong> il paziente passa in lista e il richiamo si chiude;</li>
 <li><strong>Chiudi richiamo</strong> (in fondo, staccato dal <strong>Salva</strong>): scegli <strong>Fatto</strong> (il paziente è stato
-richiamato) o <strong>Non serve più</strong>, scrivi l&#39;esito se vuoi e conferma. Il richiamo esce dalla
-lista; per qualche secondo in basso c&#39;è <strong>Annulla</strong>, che lo riapre.</li>
+richiamato) o <strong>Non serve più</strong>, scrivi l&#39;esito se vuoi, controlla la <strong>Data di chiusura</strong>
+(oggi, oppure un giorno passato, mai prima della creazione del richiamo) e conferma. Il
+richiamo esce dalla lista; per qualche secondo in basso c&#39;è <strong>Annulla</strong>, che lo riapre.</li>
 </ul>
 </li>
-<li>Un richiamo chiuso si ritrova scegliendo «Fatto» o «Annullato» nel filtro <strong>Stato</strong>, e si può
-<strong>Riaprire</strong>.</li>
+<li>Un richiamo chiuso si ritrova scegliendo «Fatto» o «Annullato» nel filtro <strong>Stato</strong> (o in <strong>Tutti
+i richiami</strong> del paziente). Aprendolo:<ul>
+<li><strong>Modifica chiusura</strong> corregge la data di chiusura e l&#39;esito;</li>
+<li><strong>Riapri</strong> lo riporta tra quelli aperti, con la data del richiamo di prima. La chiusura non
+sparisce: resta in <strong>Chiusure precedenti</strong>, con chi l&#39;ha chiuso, il giorno, l&#39;esito e quando è
+stato riaperto. Se il paziente ha già un richiamo aperto uguale (stesso motivo scritto e stessa
+data), l&#39;app lo dice e non lo riapre.</li>
+</ul>
+</li>
 </ol>
 <p>Fissando un nuovo appuntamento al paziente, i richiami per «No», non presentato, annullato e
-richiesta scaduta si chiudono da soli. L&#39;operatore può chiudere solo i richiami assegnati a lui.</p>
+richiesta scaduta si chiudono da soli, con la data del giorno in cui hai preso l&#39;appuntamento (poi
+modificabile). L&#39;operatore può chiudere, modificare la chiusura e riaprire solo i richiami assegnati
+a lui.</p>
 <p>Se lo studio è passato a Enident dal vecchio gestionale, i richiami ancora da fare dal 2026 sono
 stati importati qui, con la data e il testo di allora (oppure «Richiamo dal vecchio gestionale»).
 Un paziente ha un richiamo solo: se nel vecchio gestionale ne aveva più d&#39;uno, gli altri sono nelle
 note del richiamo, insieme ai tentativi di contatto già fatti.</p>
+<h3 id="ordine">Ordine</h3>
+<p>Di solito i richiami sono in ordine di <strong>data del richiamo</strong>. Accanto c&#39;è <strong>Crescente /
+Decrescente</strong>:</p>
+<ul>
+<li><strong>Crescente</strong> (il solito): prima quelli senza data, da fare subito, poi dal giorno più vicino; a
+parità di giorno, il più vecchio prima;</li>
+<li><strong>Decrescente</strong>: l&#39;ordine esattamente rovesciato, quindi quelli senza data in fondo.</li>
+</ul>
+<p>La scelta resta memorizzata su quel computer. Nei filtri puoi ordinare anche per priorità, o per i
+più vecchi o i più recenti.</p>
 <h3 id="filtri">Filtri</h3>
 <p>L&#39;icona dei filtri in cima alla scheda apre <strong>Filtri e ordinamento</strong>: <strong>Quando</strong> (di solito
 <strong>Fino a oggi</strong>, cioè quelli da fare oggi o senza data; <strong>Futuri</strong> per quelli spostati più avanti,
 <strong>Tutti</strong>, <strong>Personalizzato</strong> con le date <strong>Da</strong> e <strong>A</strong> del richiamo, anche una sola), stato
 (aperti, fatti, annullati, tutti), motivo, assegnato a (anche «Non assegnati») e ordine
-(priorità, più vecchi o più recenti prima). I filtri restano memorizzati su quel computer;
+(data del richiamo, priorità, più vecchi o più recenti prima). I filtri restano memorizzati su quel computer;
 <strong>Azzera filtri</strong> li toglie.</p>
 <h2 id="da-spostare">Da spostare</h2>
 <p>Qui ci sono tutti gli appuntamenti dello studio segnati <strong>da spostare</strong> (vedi
@@ -202,7 +228,7 @@ nel dettaglio. <strong>Non serve più</strong> toglie il segno senza spostarlo; 
 dettaglio. Sul telefono la scheda si vede in sola lettura.</p>
 <hr>
 <p><a href="03-pazienti.html">← Pazienti</a> · <a href="index.html">Indice</a> · <a href="05-promemoria-e-comunicazioni.html">Promemoria e comunicazioni →</a></p>
-<p class="versione">Guida aggiornata alla versione 2.0.14 di Enident.</p>
+<p class="versione">Guida aggiornata alla versione 2.0.15 di Enident.</p>
 </main>
 <footer>
   <span>© <span id="anno"></span> Francesco Paolo Enia</span>
